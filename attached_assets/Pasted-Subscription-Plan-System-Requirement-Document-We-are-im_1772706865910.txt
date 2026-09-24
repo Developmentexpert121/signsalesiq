@@ -1,0 +1,112 @@
+Subscription Plan System – Requirement Document
+
+We are implementing three subscription plans for admins:
+
+Basic
+
+Standard
+
+Premium
+
+1. Subscription Gate (Super Admin Control)
+
+There will be a toggle button in the Super Admin Dashboard:
+
+Subscription Gate
+
+When enabled, admins must subscribe and pay before accessing any feature.
+
+When Subscription Gate is Enabled:
+For Existing Admins:
+
+A notification will appear informing them to purchase a subscription plan.
+
+Until they purchase a plan, they will continue seeing reminders.
+
+Once a plan is purchased, the popup/notification will stop.
+
+For Newly Created Admins:
+
+After login, they will be redirected only to the Subscription Plans page.
+
+They will not be able to access any other page.
+
+The only available options will be:
+
+Subscribe to a plan
+
+Logout
+
+Dashboard and other features will remain locked until a plan is purchased.
+
+When Subscription Gate is Disabled:
+
+Admins who already have an active subscription will continue using their plan until it expires (based on their monthly billing cycle).
+
+Admins who have not purchased any plan will automatically get free access (no subscription restriction).
+
+2. Super Admin Permissions
+
+The Super Admin will have:
+
+Plan Management
+
+Create plans
+
+Edit plans
+
+Update pricing
+
+Modify billing duration
+
+Features Section
+
+While editing a plan, Super Admin should be able to:
+
+Add features
+
+Edit features
+
+Remove features
+
+(A screenshot reference has been shared for the edit layout.)
+
+3. Owner Subscriptions Page
+
+There will be a section called:
+
+Owner Subscriptions
+
+This section will:
+
+Track subscription status of all owners/admins
+
+Show active/inactive plans
+
+Display plan type (Basic / Standard / Premium)
+
+Show payment status
+
+Track usage/events
+
+4. Price Preview
+
+In the Super Admin panel:
+
+Price Preview
+
+This will display a preview of how subscription plans appear to admins.
+
+It is only a visual preview of the subscription page layout.
+
+5. Stripe Integration
+
+We will use Stripe as the payment gateway.
+
+Stripe Credentials:
+
+Public Key:
+pk_test_XXXXXXXXXXXX
+
+Secret Key:
+sk_test_XXXXXXXXXXXX

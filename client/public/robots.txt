@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /$
+Allow: /login
+Disallow: /api/
+Disallow: /admin/
+Disallow: /opportunity/
+Disallow: /my-subscription
+Disallow: /uploads/
+Disallow: /outputs/
+
+Sitemap: https://signsalesiq.ai/sitemap.xml

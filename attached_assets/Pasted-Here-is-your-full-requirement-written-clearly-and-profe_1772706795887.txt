@@ -1,0 +1,124 @@
+Here is your full requirement written clearly and professionally:
+
+---
+
+## Subscription Plans & Payment Gateway Flow
+
+**Plans:** Basic, Standard, Premium
+
+### 1. Subscription Gate (Super Admin Control)
+
+There will be a toggle option in the **Super Admin Dashboard** called:
+
+**Subscription Gate**
+*(When enabled, admins must subscribe and pay before accessing any features.)*
+
+---
+
+## When Subscription Gate is ENABLED
+
+### For Existing Admins:
+
+* If an admin account was already created before the gate was enabled:
+
+  * They will see a **notification reminder** to purchase a subscription plan.
+  * Until they purchase a plan, reminders will continue.
+  * Once the admin buys a plan, the popup/notification will stop.
+  * After purchase, they will have full access according to their selected plan.
+
+---
+
+### For New Admins:
+
+* If a new admin account is created while the Subscription Gate is active:
+
+  * After login, the admin will be redirected only to the **Subscription Plans page**.
+  * They will not be able to access any other dashboard pages.
+  * Only two options will be available:
+
+    * Subscribe to a plan
+    * Logout
+  * Once a plan is purchased, full dashboard access will be granted.
+
+---
+
+## When Subscription Gate is DISABLED
+
+* Admins who already have an active subscription:
+
+  * Their subscription will continue normally until the end of their billing cycle.
+  * Monthly billing will proceed as per their selected plan.
+
+* Admins who have not purchased any plan:
+
+  * They will automatically get free access.
+  * No subscription will be required.
+
+---
+
+## Super Admin Capabilities
+
+### Plan Management:
+
+The Super Admin will have the ability to:
+
+* Create Plans (Basic, Standard, Premium)
+* Edit Plans
+* Update pricing
+* Add or remove features
+* Modify plan descriptions
+
+In the **Edit Plan section**, there should be an option to:
+
+* Add Features dynamically
+* Remove Features
+* Update feature limits
+
+---
+
+## Owner Subscriptions Section
+
+There should be a separate section:
+
+**Owner Subscriptions**
+
+* Track subscription status of all owners/admins
+* View active, expired, and pending subscriptions
+* Monitor event usage and billing history
+
+---
+
+## Price Preview Section
+
+There should be a **Price Preview** panel:
+
+* This will show a preview of how the subscription plans appear to admins.
+* It reflects exactly what admins see on their Subscription Page.
+
+---
+
+## Payment Gateway Integration
+
+**Stripe Integration**
+
+* Public Key: (Configured in frontend)
+* Secret Key: (Configured securely in backend)
+
+Stripe will handle:
+
+* Plan purchase
+* Monthly recurring billing
+* Payment confirmation
+* Subscription status updates
+* Webhook handling for payment success/failure
+
+---
+
+If you would like, I can now:
+
+* Create a proper technical flow (database + logic structure)
+* Design a professional UI structure for the Subscription Plans page
+* Write backend logic flow for Stripe subscription handling
+* Or convert this into a formal development requirement document (SRS format)
+
+Just tell me what you need next.

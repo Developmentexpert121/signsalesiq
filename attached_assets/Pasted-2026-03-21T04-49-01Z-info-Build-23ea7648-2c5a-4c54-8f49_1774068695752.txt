@@ -1,0 +1,65 @@
+2026-03-21T04:49:01Z info: Build: 23ea7648-2c5a-4c54-8f49-d32dcb28c880
+2026-03-21T04:49:01Z info: Running Security Scan
+2026-03-21T04:49:42Z info: Security Scan Complete
+2026-03-21T04:49:42Z info: Connecting to builder
+2026-03-21T04:49:42Z info: Builder connected
+2026-03-21T04:49:42Z info: Installing packages
+--> npm install
+
+
+up to date, audited 652 packages in 2s
+
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.12.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.0
+npm notice To update run: npm install -g npm@11.12.0
+npm notice
+
+2026-03-21T04:49:44Z info: Starting Build
+
+> rest-express@1.0.0 build
+> tsx script/build.ts
+
+
+building client...
+
+vite v7.3.1 building client environment for production...
+
+transforming...
+
+
+A PostCSS plugin did not pass the `from` option to `postcss.parse`. This may cause imported assets to be incorrectly transformed. If you've recently added a PostCSS plugin that raised this warning, please contact the package author to fix the issue.
+
+✓ 1870 modules transformed.
+
+rendering chunks...
+
+✓ built in 5.59s
+building server...
+
+✘ [ERROR] Could not resolve "@aws-sdk/client-s3"
+
+    server/doSpacesStorage.ts:1:80:
+      1 │ ...d, GetObjectCommand, HeadObjectCommand } from "@aws-sdk/client-s3";
+        ╵                                                  ~~~~~~~~~~~~~~~~~~~~
+
+  You can mark the path "@aws-sdk/client-s3" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+
+1 error
+
+Error: Build failed with 1 error:
+server/doSpacesStorage.ts:1:80: ERROR: Could not resolve "@aws-sdk/client-s3"
+    at failureErrorWithLog (/home/runner/workspace/node_modules/esbuild/lib/main.js:1467:15)
+    at /home/runner/workspace/node_modules/esbuild/lib/main.js:926:25
+    at /home/runner/workspace/node_modules/esbuild/lib/main.js:878:52
+    at buildResponseToResult (/home/runner/workspace/node_modules/esbuild/lib/main.js:924:7)
+    at /home/runner/workspace/node_modules/esbuild/lib/main.js:951:16
+    at responseCallbacks.<computed> (/home/runner/workspace/node_modules/esbuild/lib/main.js:603:9)
+    at handleIncomingPacket (/home/runner/workspace/node_modules/esbuild/lib/main.js:658:12)
+    at Socket.readFromStdout (/home/runner/workspace/node_modules/esbuild/lib/main.js:581:7)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12) {
+  errors: [Getter/Setter],
+  warnings: [Getter/Setter]
+}

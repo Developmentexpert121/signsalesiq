@@ -1,0 +1,184 @@
+You are a senior full-stack engineer. Build an MVP web app called “SignSalesIQ” for signage sales reps.
+
+UPDATED GOAL
+In addition to deterministic composited mockups (accurate perspective overlay), include an optional “Firefly Experimental Render” mode so we can evaluate how accurate Adobe Firefly is. The app must generate and store BOTH:
+A) Deterministic Composite (baseline, perspective-correct)
+B) Firefly Render (experimental AI render)
+…and show them side-by-side with a simple accuracy scoring checklist.
+
+TECH STACK (use this exactly)
+- Frontend: Next.js 14 (App Router) + TypeScript + TailwindCSS
+- Auth: NextAuth (Credentials provider) with bcrypt
+- DB: PostgreSQL + Prisma
+- Storage: local filesystem ./uploads (abstract for future S3)
+- Image processing: Node server pipeline using sharp + node-canvas
+- Background jobs: BullMQ + Redis (fallback to in-memory queue if Redis missing)
+- External integration (optional): Adobe Firefly via a clean service wrapper (no hardcoded keys; use env vars)
+- PDF export: pdf-lib (preferred) or React-PDF
+- Validation: Zod
+
+NON-NEGOTIABLE REQUIREMENTS
+1) RBAC: ADMIN and SALES
+2) Product Rules Engine: (locationType, signType, budgetRange) -> allowed products for GOOD/BETTER/BEST.
+   - The system selects products; LLM may only explain them, not change them.
+   - If sign type is Channel Letters: Good/Better/Best must respect the rules; budget-driven alternatives (e.g., pan sign) only allowed if rules explicitly permit.
+3) “Grounded Mockup” Baseline:
+   - Deterministic compositing is REQUIRED and is the primary output.
+   - Do NOT rely on text-to-image generation for placement accuracy.
+4) Firefly Experimental Render (NEW):
+   - Add an optional pipeline that uses Adobe Firefly to produce an AI-rendered version of each tier.
+   - This is for evaluation only and must be clearly labeled “Experimental / AI Render”.
+   - Firefly cannot be the only output; always produce deterministic composite too.
+5) Compliance Snapshot:
+   - MVP: Template checklist + optional city/state via geocode stub.
+6) Required Footer appears on exports and in UI per option:
+   "Note on Scale: These visualizations are for conceptual sales purposes only. Sizes have been estimated based on standard architectural ratios. A physical site survey is required to confirm final dimensions and mounting requirements before fabrication."
+
+CORE FEATURES (MVP)
+A) Authentication
+- /login + protected routes
+- prisma seed: ADMIN user (admin@signsalesiq.local / ChangeMe123!)
+
+B) Opportunity CRUD + Intake form
+Fields:
+- clientName, address, phone, email
+- meetingDate (datetime)
+- promptBox (free text)
+- signDuration: PERMANENT | TEMPORARY
+- locationType: INTERIOR | EXTERIOR
+- targetAudience: SALES | RECEPTION | INFORMATION | BOTH
+- readDistanceFt: number
+- hasLogo: boolean
+- budgetRange: enum: UNDER_2K, 2K_5K, 5K_10K, 10K_PLUS (admin editable later)
+- signType enums:
+  Interior: DIMENSIONAL_LETTERS, ADA, WALL_GRAPHICS, WINDOW_GRAPHICS, PRIVACY_FILM
+  Exterior: MONUMENT_SMALL_2x3, MONUMENT_MED_4x6, MONUMENT_LARGE_4x8,
+           CHANNEL_LETTERS_FRONT_LIT, CHANNEL_LETTERS_BACK_LIT_HALO,
+           PARKING_SIGNS, BANNERS, WINDOW_GRAPHICS_EXT,
+           STOREFRONT_PAN_SIGN_FLAT, STOREFRONT_DIMENSIONAL,
+           VEHICLE_WRAP_FULL, VEHICLE_WRAP_PARTIAL
+- notes
+
+C) Assets
+- Upload Canvas photo (required)
+- Upload logo (PDF/PNG/JPG/SVG preferred)
+- Store metadata: width, height, mime
+
+D) Plane Selection UI (MVP manual)
+- On /opportunities/[id], show Canvas image
+- User clicks 4 points clockwise to define placement plane
+- Save points to DB
+- Provide preview overlay editor (drag/scale/rotate within plane)
+
+E) Product Rules Engine + Admin UI
+- ProductRule table:
+  (locationType, signType, budgetRange) -> goodProducts[], betterProducts[], bestProducts[]
+- Seed sensible defaults.
+- /admin/rules simple editor
+
+F) Generation Pipeline (UPDATED to include Firefly)
+When user clicks “Generate Good/Better/Best”:
+- Always run deterministic composite jobs for all three tiers:
+  - Create tier overlays from logo + optional business name text
+  - Apply homography warp to plane
+  - Blend onto photo (subtle shadow, opacity, edge soften)
+  - Save outputs: outputs/{oppId}/{tier}/composite.png
+
+- Optionally run Firefly experimental jobs if user toggles “Run Firefly AI Render”:
+  - Inputs to Firefly should be controlled:
+    1) Base Canvas photo
+    2) A mask OR bounding region based on the selected plane (preferred)
+    3) A reference overlay image (the deterministic composite result) as a guide (if supported by API; otherwise include it as an additional image input)
+  - Goal: Firefly should “enhance realism” (lighting, shadow, reflections) and/or “integrate sign material look”
+  - Save outputs: outputs/{oppId}/{tier}/firefly.png
+  - Label clearly in UI as “Experimental (AI)”
+
+IMPORTANT: If Firefly API is unavailable due to missing keys, the job should fail gracefully with a clear message and the deterministic composites still succeed.
+
+G) LLM Stub Service (unchanged, but constrain!)
+- Create llmService.ts that returns rationale + compliance text.
+- Inputs:
+  - opportunity data
+  - selectedProducts (from rules engine)
+  - optional “site observation” fields (checkboxes/notes)
+- It MUST NOT be able to change product selection.
+
+H) Accuracy Evaluation UI (NEW)
+On Opportunity detail results section:
+- For each tier, show:
+  - Composite (baseline) image
+  - Firefly (experimental) image (if available)
+  - Side-by-side viewer with zoom
+  - “Accuracy Checklist” with toggles and a computed score (0–100):
+    - Placement on correct surface (0/1)
+    - Perspective matches wall plane (0/1)
+    - Scale believable vs door/window reference (0/1)
+    - Logo crisp/no distortion (0/1)
+    - Shadows/reflections consistent (0/1)
+    - No hallucinated elements (0/1)
+  - Store score + notes in DB per output
+
+I) PDF Export (UPDATED)
+- Export a proposal PDF with:
+  - Client + opportunity summary
+  - Good/Better/Best sections
+  - For each tier include:
+    - Composite image (required)
+    - Firefly image (optional) on same page or next to it, labeled “Experimental”
+    - Selected products list
+    - Rationale + compliance snapshot
+  - Include required footer
+
+DATABASE (Prisma Models)
+- User { id, name, email, passwordHash, role, createdAt }
+- Opportunity { id, ownerId, fields..., createdAt, updatedAt }
+- Asset { id, opportunityId, type: CANVAS|LOGO, filename, mimeType, width, height, createdAt }
+- Plane { id, opportunityId, points JSON(4 points), createdAt }
+- ProductRule { id, locationType, signType, budgetRange, goodProducts JSON[], betterProducts JSON[], bestProducts JSON[] }
+- Output { id, opportunityId, tier, baselineImageFilename, fireflyImageFilename?,
+           selectedProducts JSON[], rationaleText, complianceText,
+           accuracyScoreBaseline?, accuracyScoreFirefly?, accuracyNotes?,
+           createdAt }
+- Export { id, opportunityId, pdfFilename, createdAt }
+
+ADOBE FIREFLY SERVICE WRAPPER (NEW)
+- Implement fireflyService.ts with methods:
+  - isConfigured(): boolean (checks env vars)
+  - renderTier(params): returns local filename
+- Use env vars:
+  - FIREFLY_CLIENT_ID
+  - FIREFLY_CLIENT_SECRET (or API key scheme depending on SDK)
+  - FIREFLY_BASE_URL (optional)
+- Do NOT hardcode. Provide a README section describing env vars.
+- If official SDK is available in npm, use it; otherwise implement an HTTP wrapper with fetch and clear request/response logging (no secrets in logs).
+
+PROMPTING / CONTROL FOR FIREFLY
+- Build Firefly prompts that are constrained:
+  - “Enhance realism of the attached sign mockup on the building photo while preserving exact placement, size, and logo fidelity. Do not add new objects. Do not change architecture.”
+- Include negative constraints if supported:
+  - “No extra signs, no new text, no people, no vehicles, no changes to building structure.”
+
+IMPLEMENTATION ORDER
+1) Prisma schema + migrations + seed
+2) Auth + RBAC
+3) Opportunity CRUD + uploads
+4) Plane selection UI + save points
+5) Deterministic composite generation jobs
+6) Results viewer
+7) Firefly experimental pipeline + side-by-side compare
+8) Accuracy checklist scoring + persistence
+9) PDF export with both images
+
+DELIVERABLE
+A working MVP in Replit with:
+- Auth
+- Opportunity intake
+- Upload Canvas/logo
+- Manual 4-point plane selection
+- Generate Good/Better/Best deterministic composites
+- Optional Firefly experimental renders
+- Side-by-side compare + accuracy scoring
+- PDF export
+- Admin rules editor + admin user
+
+NO TODOs for the main flow. If Firefly integration cannot run without credentials, ship a clean stub with UI that explains configuration and still completes baseline output.

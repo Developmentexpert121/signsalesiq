@@ -1,0 +1,131 @@
+Mar 28 11:20:58  (Use `node --trace-warnings ...` to show where the warning was created)
+Mar 28 11:20:58  
+Mar 28 11:20:58  > rest-express@1.0.0 start
+Mar 28 11:20:58  > NODE_ENV=production node dist/index.cjs
+Mar 28 11:20:58  
+Mar 28 11:20:58  [CloudStorage] Using: DO Spaces
+Mar 28 11:20:59  [Gemini] Replit proxy fallback disabled in production (localhost proxy not available outside Replit).
+Mar 28 11:20:59  [DB] Running migrations from /workspace/dist/migrations...
+Mar 28 11:20:59  (node:28) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+Mar 28 11:20:59  (Use `node --trace-warnings ...` to show where the warning was created)
+Mar 28 11:20:59  [DB] Migrations complete.
+Mar 28 11:20:59  Ensured VEHICLE location_type enum value exists
+Mar 28 11:20:59  Seeding tenants and users...
+Mar 28 11:20:59  Created tenant: Default Tenant (default)
+Mar 28 11:20:59  Created tenant: FASTSIGNS Plaistow (fastsigns-plaistow)
+Mar 28 11:21:00  Created tenant: FASTSIGNS of Waltham (fs-waltham)
+Mar 28 11:21:00  Created tenant: FASTSIGNS DTC (fastsigns.com/221)
+Mar 28 11:21:00  Created tenant: FASTSIGNS Lancaster (fastsigns.com/lancaster-pa/)
+Mar 28 11:21:00  Created tenant: FASTSIGNS of Saratoga Springs (fastsigns-of-saratoga-springs)
+Mar 28 11:21:00  Created tenant: FASTSIGNS® of Newington (fastsigns-of-newington)
+Mar 28 11:21:00  Created tenant: Test Owner (test-owner)
+Mar 28 11:21:00  Created tenant: FastSigns of Waltham (fastsigns-waltham)
+Mar 28 11:21:00  Created SUPER_ADMIN: admin
+Mar 28 11:21:00  Created SUPER_ADMIN: developmentexpert121@gmail.com
+Mar 28 11:21:00  Created ADMIN: tenantadmin → default
+Mar 28 11:21:00  Created SALES: sales → default
+Mar 28 11:21:00  Created ADMIN: vj.ohol@fastsigns.com → fastsigns-plaistow
+Mar 28 11:21:00  Created SALES: lorena.filian@fastsigns.com → fastsigns-plaistow
+Mar 28 11:21:00  Created ADMIN: smehta@fastsigns.com → fs-waltham
+Mar 28 11:21:00  Created SALES: travis.martin@fastsigns.com → fs-waltham
+Mar 28 11:21:00  Created SALES: john.dowd@fastsigns.com → fs-waltham
+Mar 28 11:21:00  Created SALES: vishnu → fs-waltham
+Mar 28 11:21:00  Created SALES: brendan.donovan@fastsigns.com → fs-waltham
+Mar 28 11:21:00  Created ADMIN: b.williams@fastsigns.com → fastsigns.com/221
+Mar 28 11:21:00  Created ADMIN: wes.kauffman@concordiaholdco.com → fastsigns.com/lancaster-pa/
+Mar 28 11:21:01  Created ADMIN: rick.bult@fastsigns.com → fastsigns-of-saratoga-springs
+Mar 28 11:21:01  Created ADMIN: joel.miller@fastsigns.com → fastsigns-of-newington
+Mar 28 11:21:01  Created ADMIN: vjkalwani@yahoo.com → test-owner
+Mar 28 11:21:01  Created SALES: syncuser → test-owner
+Mar 28 11:21:01  Users and tenants seeded successfully.
+Mar 28 11:21:01  Seeding rules...
+Mar 28 11:21:01  Database seeded successfully
+Mar 28 11:21:01  Seeding sign types...
+Mar 28 11:21:01  Sign types seeded successfully
+Mar 28 11:21:01  Normalized 7 global rules to standard template format
+Mar 28 11:21:01  Created 38 global product rules for sign types missing coverage
+Mar 28 11:21:01  Seeding reference images (0 exist, 152 expected)...
+Mar 28 11:21:01  Reference images seeded successfully
+Mar 28 11:21:01  11:21:01 AM [express] serving on port 8080
+Mar 28 11:21:01  11:21:01 AM [express] environment: production
+Mar 28 11:21:01  11:21:01 AM [express] health check: http://0.0.0.0:8080/health
+Mar 28 11:21:01  
+Mar 28 11:21:01  ===========================================
+Mar 28 11:21:01    SignSalesIQ - Startup Configuration
+Mar 28 11:21:01  ===========================================
+Mar 28 11:21:01    Environment   : production
+Mar 28 11:21:01    Port          : 8080
+Mar 28 11:21:01    Database      : postgresql:***@signsalesiq-productions-do-user-33441100-0.m.db.ondigitalocean.com:25060/defaultdb?sslmode=require
+Mar 28 11:21:01    Replit        : no
+Mar 28 11:21:01  
+Mar 28 11:21:01    --- AI Services ---
+Mar 28 11:21:01    Vertex API Key          : (not set)
+Mar 28 11:21:01    Google API Key          : ***set***
+Mar 28 11:21:01    Gemini Integrations Key : ***set***
+Mar 28 11:21:01    Gemini Base URL         : http://localhost:1106/modelfarm/gemini
+Mar 28 11:21:01  
+Mar 28 11:21:01    --- Email ---
+Mar 28 11:21:01    SMTP From : info@installiq.ai
+Mar 28 11:21:01    SMTP Pass : ***set***
+Mar 28 11:21:01  
+Mar 28 11:21:01    --- Stripe ---
+Mar 28 11:21:01    Secret Key     : ***set***
+Mar 28 11:21:01    Webhook Secret : (not set)
+Mar 28 11:21:01  
+Mar 28 11:21:01    --- Object Storage ---
+Mar 28 11:21:01    Bucket ID : ***set***
+Mar 28 11:21:01  ===========================================
+Mar 28 11:21:01  
+Mar 28 11:21:01  Starting plan expiration scheduler (runs every 12 hours)
+Mar 28 11:21:01  Seeded email template: Admin Welcome
+Mar 28 11:21:01  Seeded email template: User Welcome
+Mar 28 11:21:01  Seeded email template: Opportunity Created
+Mar 28 11:21:01  Seeded email template: Opportunity Status Update
+Mar 28 11:21:01  Seeded email template: Plan Purchase Confirmation
+Mar 28 11:21:01  Seeded email template: Plan Expiration Warning
+Mar 28 11:22:13  (node:1) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+Mar 28 11:22:13  (Use `node --trace-warnings ...` to show where the warning was created)
+Mar 28 11:22:13  
+Mar 28 11:22:13  > rest-express@1.0.0 start
+Mar 28 11:22:13  > NODE_ENV=production node dist/index.cjs
+Mar 28 11:22:13  
+Mar 28 11:22:14  [CloudStorage] Using: DO Spaces
+Mar 28 11:22:14  [Gemini] Replit proxy fallback disabled in production (localhost proxy not available outside Replit).
+Mar 28 11:22:15  [DB] Running migrations from /workspace/dist/migrations...
+Mar 28 11:22:15  (node:27) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+Mar 28 11:22:15  (Use `node --trace-warnings ...` to show where the warning was created)
+Mar 28 11:22:15  [DB] Migrations complete.
+Mar 28 11:22:15  Ensured VEHICLE location_type enum value exists
+Mar 28 11:22:15  Seeding tenants and users...
+Mar 28 11:22:15  Users and tenants seeded successfully.
+Mar 28 11:22:15  11:22:15 AM [express] serving on port 8080
+Mar 28 11:22:15  11:22:15 AM [express] environment: production
+Mar 28 11:22:15  11:22:15 AM [express] health check: http://0.0.0.0:8080/health
+Mar 28 11:22:15  
+Mar 28 11:22:15  ===========================================
+Mar 28 11:22:15    SignSalesIQ - Startup Configuration
+Mar 28 11:22:15  ===========================================
+Mar 28 11:22:15    Environment   : production
+Mar 28 11:22:15    Port          : 8080
+Mar 28 11:22:15    Database      : postgresql:***@signsalesiq-productions-do-user-33441100-0.m.db.ondigitalocean.com:25060/defaultdb?sslmode=require
+Mar 28 11:22:15    Replit        : no
+Mar 28 11:22:15  
+Mar 28 11:22:15    --- AI Services ---
+Mar 28 11:22:15    Vertex API Key          : (not set)
+Mar 28 11:22:15    Google API Key          : ***set***
+Mar 28 11:22:15    Gemini Integrations Key : ***set***
+Mar 28 11:22:15    Gemini Base URL         : http://localhost:1106/modelfarm/gemini
+Mar 28 11:22:15  
+Mar 28 11:22:15    --- Email ---
+Mar 28 11:22:15    SMTP From : info@installiq.ai
+Mar 28 11:22:15    SMTP Pass : ***set***
+Mar 28 11:22:15  
+Mar 28 11:22:15    --- Stripe ---
+Mar 28 11:22:15    Secret Key     : ***set***
+Mar 28 11:22:15    Webhook Secret : (not set)
+Mar 28 11:22:15  
+Mar 28 11:22:15    --- Object Storage ---
+Mar 28 11:22:15    Bucket ID : ***set***
+Mar 28 11:22:15  ===========================================
+Mar 28 11:22:15  
+Mar 28 11:22:15  Starting plan expiration scheduler (runs every 12 hours)

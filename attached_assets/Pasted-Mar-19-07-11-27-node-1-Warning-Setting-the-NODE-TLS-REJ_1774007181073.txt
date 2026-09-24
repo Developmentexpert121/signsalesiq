@@ -1,0 +1,88 @@
+Mar 19 07:11:27  (node:1) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+Mar 19 07:11:27  (Use `node --trace-warnings ...` to show where the warning was created)
+Mar 19 07:11:27  
+Mar 19 07:11:27  > rest-express@1.0.0 start
+Mar 19 07:11:27  > NODE_ENV=production node dist/index.cjs
+Mar 19 07:11:27  
+Mar 19 07:11:29  
+Mar 19 07:11:29  ===========================================
+Mar 19 07:11:29    SignSalesIQ - Startup Configuration
+Mar 19 07:11:29  ===========================================
+Mar 19 07:11:29    Environment   : production
+Mar 19 07:11:29    Port          : 8080
+Mar 19 07:11:29    Database      : postgresql://***@signsalesiq-db-do-user-33441100-0.f.db.ondigitalocean.com:25060/defaultdb?sslmode=require
+Mar 19 07:11:29    Replit        : no
+Mar 19 07:11:29  
+Mar 19 07:11:29    --- AI Services ---
+Mar 19 07:11:29    Vertex API Key          : (not set)
+Mar 19 07:11:29    Gemini Integrations Key : ***set***
+Mar 19 07:11:29    Gemini Base URL         : http://localhost:1106/modelfarm/gemini
+Mar 19 07:11:29  
+Mar 19 07:11:29    --- Email ---
+Mar 19 07:11:29    SMTP From : fswaltham@gmail.com
+Mar 19 07:11:29    SMTP Pass : ***set***
+Mar 19 07:11:29  
+Mar 19 07:11:29    --- Stripe ---
+Mar 19 07:11:29    Secret Key     : ***set***
+Mar 19 07:11:29    Webhook Secret : (not set)
+Mar 19 07:11:29  
+Mar 19 07:11:29    --- Object Storage ---
+Mar 19 07:11:29    Bucket ID : ***set***
+Mar 19 07:11:29  ===========================================
+Mar 19 07:11:29  
+Mar 19 07:11:29  (node:28) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+Mar 19 07:11:29  (Use `node --trace-warnings ...` to show where the warning was created)
+Mar 19 07:11:29  Ensured VEHICLE location_type enum value exists
+Mar 19 07:11:29  7:11:29 AM [express] serving on port 8080
+Mar 19 07:11:29  7:11:29 AM [express] environment: production
+Mar 19 07:11:29  7:11:29 AM [express] health check: http://0.0.0.0:8080/health
+Mar 19 07:11:29  Starting plan expiration scheduler (runs every 12 hours)
+Mar 19 14:19:16  2:19:16 PM [express] GET /api/auth/me 401 in 4ms :: {"message":"Not authenticated"}
+Mar 19 14:19:25  2:19:25 PM [express] GET /api/auth/me 401 in 1ms :: {"message":"Not authenticated"}
+Mar 20 06:25:50  6:25:50 AM [express] GET /api/auth/me 401 in 1ms :: {"message":"Not authenticated"}
+Mar 20 09:54:33  9:54:33 AM [express] GET /api/auth/me 401 in 2ms :: {"message":"Not authenticated"}
+Mar 19 07:11:33  (node:1) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+Mar 19 07:11:33  (Use `node --trace-warnings ...` to show where the warning was created)
+Mar 19 07:11:33  
+Mar 19 07:11:33  > rest-express@1.0.0 start
+Mar 19 07:11:33  > NODE_ENV=production node dist/index.cjs
+Mar 19 07:11:33  
+Mar 19 07:11:35  
+Mar 19 07:11:35  ===========================================
+Mar 19 07:11:35    SignSalesIQ - Startup Configuration
+Mar 19 07:11:35  ===========================================
+Mar 19 07:11:35    Environment   : production
+Mar 19 07:11:35    Port          : 8080
+Mar 19 07:11:35    Database      : postgresql://***@signsalesiq-db-do-user-33441100-0.f.db.ondigitalocean.com:25060/defaultdb?sslmode=require
+Mar 19 07:11:35    Replit        : no
+Mar 19 07:11:35  
+Mar 19 07:11:35    --- AI Services ---
+Mar 19 07:11:35    Vertex API Key          : (not set)
+Mar 19 07:11:35    Gemini Integrations Key : ***set***
+Mar 19 07:11:35    Gemini Base URL         : http://localhost:1106/modelfarm/gemini
+Mar 19 07:11:35  
+Mar 19 07:11:35    --- Email ---
+Mar 19 07:11:35    SMTP From : fswaltham@gmail.com
+Mar 19 07:11:35    SMTP Pass : ***set***
+Mar 19 07:11:35  
+Mar 19 07:11:35    --- Stripe ---
+Mar 19 07:11:35    Secret Key     : ***set***
+Mar 19 07:11:35    Webhook Secret : (not set)
+Mar 19 07:11:35  
+Mar 19 07:11:35    --- Object Storage ---
+Mar 19 07:11:35    Bucket ID : ***set***
+Mar 19 07:11:35  ===========================================
+Mar 19 07:11:35  
+Mar 19 07:11:35  (node:26) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+Mar 19 07:11:35  (Use `node --trace-warnings ...` to show where the warning was created)
+Mar 19 07:11:35  Ensured VEHICLE location_type enum value exists
+Mar 19 07:11:35  7:11:35 AM [express] serving on port 8080
+Mar 19 07:11:35  7:11:35 AM [express] environment: production
+Mar 19 07:11:35  7:11:35 AM [express] health check: http://0.0.0.0:8080/health
+Mar 19 07:11:35  Starting plan expiration scheduler (runs every 12 hours)
+Mar 19 13:27:48  1:27:48 PM [express] GET /api/auth/me 401 in 4ms :: {"message":"Not authenticated"}
+Mar 19 13:53:00  1:53:00 PM [express] GET /api/auth/me 401 in 2ms :: {"message":"Not authenticated"}
+Mar 19 14:33:59  2:33:59 PM [express] GET /api/auth/me 401 in 2ms :: {"message":"Not authenticated"}
+Mar 19 14:40:02  2:40:02 PM [express] GET /api/auth/me 401 in 1ms :: {"message":"Not authenticated"}
+Mar 20 09:55:15  9:55:15 AM [express] GET /api/auth/me 401 in 2ms :: {"message":"Not authenticated"}
+Mar 20 10:07:26  10:07:26 AM [express] GET /api/auth/me 401 in 2ms :: {"message":"Not authenticated"}

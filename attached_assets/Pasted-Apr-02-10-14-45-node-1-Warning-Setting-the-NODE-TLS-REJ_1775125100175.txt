@@ -1,0 +1,99 @@
+Apr 02 10:14:45  (node:1) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+Apr 02 10:14:45  (Use `node --trace-warnings ...` to show where the warning was created)
+Apr 02 10:14:45  
+Apr 02 10:14:45  > rest-express@1.0.0 start
+Apr 02 10:14:45  > NODE_ENV=production node dist/index.cjs
+Apr 02 10:14:45  
+Apr 02 10:14:46  [CloudStorage] Using: DO Spaces
+Apr 02 10:14:47  [Gemini] Replit proxy fallback disabled in production (localhost proxy not available outside Replit).
+Apr 02 10:14:47  [DB] Running migrations from /workspace/dist/migrations...
+Apr 02 10:14:47  (node:28) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+Apr 02 10:14:47  (Use `node --trace-warnings ...` to show where the warning was created)
+Apr 02 10:14:47  [DB] Migrations complete.
+Apr 02 10:14:47  Ensured VEHICLE location_type enum value exists
+Apr 02 10:14:47  [AutoSeed]   ↺ Config synced: signTypes (47 rows)
+Apr 02 10:14:47  [AutoSeed]   ↺ Config synced: emailTemplates (6 rows)
+Apr 02 10:14:47  [AutoSeed]   ↺ Config synced: signTypeReferences (156 rows)
+Apr 02 10:14:47  [AutoSeed]   ↺ Config synced: mockupFeedback (17 rows)
+Apr 02 10:14:48  [AutoSeed] FORCE_SEED=true — running full import on existing DB (10 tenants). All inserts are idempotent.
+Apr 02 10:14:48  [AutoSeed]   ✓ tenants (10/10 rows)
+Apr 02 10:14:48  [AutoSeed]   ✓ users (17/17 rows)
+Apr 02 10:14:48  [AutoSeed]   ✓ passwordResetTokens (0/8 rows (8 skipped — FK refs not in this DB))
+Apr 02 10:14:50  [AutoSeed]   ✓ opportunities (0/42 rows (42 skipped — FK refs not in this DB))
+Apr 02 10:14:53  [AutoSeed]   ✓ assets (0/103 rows (103 skipped — FK refs not in this DB))
+Apr 02 10:14:55  [AutoSeed]   ✓ signSpecs (0/51 rows (51 skipped — FK refs not in this DB))
+Apr 02 10:14:57  [AutoSeed]   ✓ planes (0/46 rows (46 skipped — FK refs not in this DB))
+Apr 02 10:14:59  [AutoSeed]   ✓ outputs (0/58 rows (58 skipped — FK refs not in this DB))
+Apr 02 10:15:01  [AutoSeed]   ✓ exports (0/43 rows (43 skipped — FK refs not in this DB))
+Apr 02 10:15:02  [AutoSeed]   ✓ productRules (53/58 rows (5 skipped — FK refs not in this DB))
+Apr 02 10:15:02  [AutoSeed]   ✓ emailLogs (90/90 rows)
+Apr 02 10:15:02  [AutoSeed]   ✓ activityLogs (35/35 rows)
+Apr 02 10:15:02  [AutoSeed] ✅ Full import complete — 205 rows loaded.
+Apr 02 10:15:02  Seeding tenants and users...
+Apr 02 10:15:02  Users and tenants seeded successfully.
+Apr 02 10:15:02  Removed 47 duplicate global rules (keeping 1 per sign type)
+Apr 02 10:15:02  10:15:02 AM [express] serving on port 8080
+Apr 02 10:15:02  10:15:02 AM [express] environment: production
+Apr 02 10:15:02  10:15:02 AM [express] health check: http://0.0.0.0:8080/health
+Apr 02 10:15:02  
+Apr 02 10:15:02  ===========================================
+Apr 02 10:15:02    SignSalesIQ - Startup Configuration
+Apr 02 10:15:02  ===========================================
+Apr 02 10:15:02    Environment   : production
+Apr 02 10:15:02    Port          : 8080
+Apr 02 10:15:02    Database      : postgresql:***@signsalesiq-productions-do-user-33441100-0.m.db.ondigitalocean.com:25060/defaultdb?sslmode=require
+Apr 02 10:15:02    Replit        : no
+Apr 02 10:15:02  
+Apr 02 10:15:02    --- AI Services ---
+Apr 02 10:15:02    Vertex API Key          : (not set)
+Apr 02 10:15:02    Google API Key          : ***set***
+Apr 02 10:15:02    Gemini Integrations Key : ***set***
+Apr 02 10:15:02    Gemini Base URL         : http://localhost:1106/modelfarm/gemini
+Apr 02 10:15:02  
+Apr 02 10:15:02    --- Email ---
+Apr 02 10:15:02    Resend API Key : (not set)
+Apr 02 10:15:02    SMTP From      : info@installiq.ai
+Apr 02 10:15:02    SMTP Pass      : ***set***
+Apr 02 10:15:02  
+Apr 02 10:15:02    --- Stripe ---
+Apr 02 10:15:02    Secret Key     : ***set***
+Apr 02 10:15:02    Webhook Secret : (not set)
+Apr 02 10:15:02  
+Apr 02 10:15:02    --- Object Storage ---
+Apr 02 10:15:02    Bucket ID : ***set***
+Apr 02 10:15:02  ===========================================
+Apr 02 10:15:02  
+Apr 02 10:15:02  [Email] SMTP configured: host=smtp0001.neo.space port=587 user=info@installiq.ai pass=ins*** (len=13)
+Apr 02 10:15:02  Starting plan expiration scheduler (runs every 12 hours)
+Apr 02 10:15:03  [Email] SMTP connection verified OK
+Apr 02 10:16:43  (node:1) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+Apr 02 10:16:43  (Use `node --trace-warnings ...` to show where the warning was created)
+Apr 02 10:16:43  
+Apr 02 10:16:43  > rest-express@1.0.0 start
+Apr 02 10:16:43  > NODE_ENV=production node dist/index.cjs
+Apr 02 10:16:43  
+Apr 02 10:16:44  [CloudStorage] Using: DO Spaces
+Apr 02 10:16:45  [Gemini] Replit proxy fallback disabled in production (localhost proxy not available outside Replit).
+Apr 02 10:16:46  [DB] Running migrations from /workspace/dist/migrations...
+Apr 02 10:16:46  (node:28) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+Apr 02 10:16:46  (Use `node --trace-warnings ...` to show where the warning was created)
+Apr 02 10:16:46  [DB] Migrations complete.
+Apr 02 10:16:46  Ensured VEHICLE location_type enum value exists
+Apr 02 10:16:46  [AutoSeed]   ↺ Config synced: signTypes (47 rows)
+Apr 02 10:16:46  [AutoSeed]   ↺ Config synced: emailTemplates (6 rows)
+Apr 02 10:16:46  [AutoSeed]   ↺ Config synced: signTypeReferences (156 rows)
+Apr 02 10:16:46  [AutoSeed]   ↺ Config synced: mockupFeedback (17 rows)
+Apr 02 10:16:46  [AutoSeed] FORCE_SEED=true — running full import on existing DB (10 tenants). All inserts are idempotent.
+Apr 02 10:16:46  [AutoSeed]   ✓ tenants (10/10 rows)
+Apr 02 10:16:46  [AutoSeed]   ✓ users (17/17 rows)
+Apr 02 10:16:46  [AutoSeed]   ✓ passwordResetTokens (0/8 rows (8 skipped — FK refs not in this DB))
+Apr 02 10:16:48  [AutoSeed]   ✓ opportunities (0/42 rows (42 skipped — FK refs not in this DB))
+Apr 02 10:16:52  [AutoSeed]   ✓ assets (0/103 rows (103 skipped — FK refs not in this DB))
+Apr 02 10:16:54  [AutoSeed]   ✓ signSpecs (0/51 rows (51 skipped — FK refs not in this DB))
+Apr 02 10:16:56  [AutoSeed]   ✓ planes (0/46 rows (46 skipped — FK refs not in this DB))
+Apr 02 10:16:58  [AutoSeed]   ✓ outputs (0/58 rows (58 skipped — FK refs not in this DB))
+Apr 02 10:17:01  [AutoSeed]   ✓ exports (0/43 rows (43 skipped — FK refs not in this DB))
+Apr 02 10:17:01  [AutoSeed]   ✓ productRules (53/58 rows (5 skipped — FK refs not in this DB))
+Apr 02 10:17:01  [AutoSeed]   ✓ emailLogs (90/90 rows)
+Apr 02 10:17:01  [AutoSeed]   ✓ activityLogs (35/35 rows)
+Apr 02 10:17:01  [AutoSeed] ✅ Full import complete — 205 rows loaded.

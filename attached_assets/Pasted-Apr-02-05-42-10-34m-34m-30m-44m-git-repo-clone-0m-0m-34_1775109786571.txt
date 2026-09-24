@@ -1,0 +1,174 @@
+Apr 02 05:42:10  [34m╭────────────[34m[30m[44m git repo clone [0m[0m[34m───────────╼[0m
+Apr 02 05:42:10  [34m│[0m [34m › fetching app source code[0m
+Apr 02 05:42:10  [34m│[0m => Selecting branch "production"
+Apr 02 05:42:32  [34m│[0m => Checking out commit "f3fa2d82cb7bb086cd995877efbec4b4345477de"
+Apr 02 05:42:36  [34m│[0m 
+Apr 02 05:42:36  [34m│[0m [32m ✔ cloned repo to [35m/workspace[0m[0m
+Apr 02 05:42:36  [34m╰────────────────────────────────────────╼[0m
+Apr 02 05:42:36  
+Apr 02 05:42:36  [34m › configuring build-time app environment variables:[0m
+Apr 02 05:42:36       AI_INTEGRATIONS_OPENAI_API_KEY GOOGLE_CLIENT_SECRET_SMTP SMTP_USER DO_SPACES_BUCKET AI_INTEGRATIONS_GEMINI_BASE_URL STRIPE_SECRET_KEY SMTP_PASS AI_INTEGRATIONS_OPENAI_BASE_URL SESSION_SECRET NODE_TLS_REJECT_UNAUTHORIZED GOOGLE_CLIENT_ID_SMTP Value AI_INTEGRATIONS_GEMINI_API_KEY DEFAULT_OBJECT_STORAGE_BUCKET_ID PRIVATE_OBJECT_DIR SLACK_TEST_API_KEY DO_SPACES_KEY DO_SPACES_REGION PUBLIC_OBJECT_SEARCH_PATHS DO_SPACES_SECRET DO_SPACES_ENDPOINT DATABASE_URL DO_DATABASE_URL GOOGLE_API_KEY Key
+Apr 02 05:42:36  
+Apr 02 05:42:36  [34m › configuring custom build command to be run at the end of the build:[0m
+Apr 02 05:42:36     [34m│[0m npm install
+Apr 02 05:42:36     [34m│[0m npm run build
+Apr 02 05:42:36  
+Apr 02 05:42:36  [34m╭────────────[34m[30m[44m buildpack detection [0m[0m[34m───────────╼[0m
+Apr 02 05:42:36  [34m│[0m [34m › using Ubuntu 22.04 stack[0m
+Apr 02 05:42:38  [34m│[0m Detected the following buildpacks suitable to build your app:
+Apr 02 05:42:38  [34m│[0m 
+Apr 02 05:42:38  [34m│[0m    digitalocean/nodejs-appdetect  v0.1.2    
+Apr 02 05:42:38  [34m│[0m    heroku/nodejs                  v0.338.5  (Node.js)
+Apr 02 05:42:38  [34m│[0m    digitalocean/procfile          v0.1.0    (Procfile)
+Apr 02 05:42:38  [34m│[0m    digitalocean/custom            v0.2.0    (Custom Build Command)
+Apr 02 05:42:38  [34m╰─────────────────────────────────────────────╼[0m
+Apr 02 05:42:38  
+Apr 02 05:42:38  [34m╭────────────[34m[30m[44m build caching [0m[0m[34m───────────╼[0m
+Apr 02 05:42:38  [34m│[0m [34m › checking for cache from a previous build[0m
+Apr 02 05:42:38  [34m│[0m Timer: Analyzer started at 2026-04-02T05:42:38Z
+Apr 02 05:42:39  [34m│[0m Restoring metadata for "heroku/nodejs:shim" from cache
+Apr 02 05:42:39  [34m│[0m Timer: Analyzer ran for 671.801628ms and ended at 2026-04-02T05:42:39Z
+Apr 02 05:42:39  [34m│[0m Timer: Restorer started at 2026-04-02T05:42:39Z
+Apr 02 05:42:39  [34m│[0m Restoring data for "heroku/nodejs:shim" from cache
+Apr 02 05:42:40  [34m│[0m Timer: Restorer ran for 1.120362758s and ended at 2026-04-02T05:42:40Z
+Apr 02 05:42:40  [34m╰───────────────────────────────────────╼[0m
+Apr 02 05:42:40  
+Apr 02 05:42:40  [34m╭────────────[34m[30m[44m app build [0m[0m[34m───────────╼[0m
+Apr 02 05:42:40  [34m│[0m Timer: Builder started at 2026-04-02T05:42:40Z
+Apr 02 05:42:41  [34m│[0m        
+Apr 02 05:42:41  [34m│[0m -----> Creating runtime environment
+Apr 02 05:42:41  [34m│[0m        
+Apr 02 05:42:41  [34m│[0m        NPM_CONFIG_LOGLEVEL=error
+Apr 02 05:42:41  [34m│[0m        NODE_TLS_REJECT_UNAUTHORIZED=0
+Apr 02 05:42:41  [34m│[0m        NODE_VERBOSE=false
+Apr 02 05:42:41  [34m│[0m        NODE_ENV=
+Apr 02 05:42:41  [34m│[0m        NODE_MODULES_CACHE=true
+Apr 02 05:42:41  [34m│[0m        
+Apr 02 05:42:41  [34m│[0m -----> Installing binaries
+Apr 02 05:42:41  [34m│[0m        engines.node (package.json):   unspecified
+Apr 02 05:42:41  [34m│[0m        engines.npm (package.json):    unspecified (use default)
+Apr 02 05:42:41  [34m│[0m        
+Apr 02 05:42:41  [34m│[0m        Resolving node version 22.x...
+Apr 02 05:42:41  [34m│[0m        Downloading and installing node 22.22.1...
+Apr 02 05:42:42  [34m│[0m        Validating checksum
+Apr 02 05:42:44  [34m│[0m        Using default npm version: 10.9.4
+Apr 02 05:42:45  [34m│[0m        
+Apr 02 05:42:45  [34m│[0m -----> Restoring cache
+Apr 02 05:42:45  [34m│[0m        - npm cache
+Apr 02 05:42:45  [34m│[0m        
+Apr 02 05:42:45  [34m│[0m -----> Installing dependencies
+Apr 02 05:42:45  [34m│[0m        Installing node modules
+Apr 02 05:42:46  [34m│[0m        (node:2971) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+Apr 02 05:42:46  [34m│[0m        (Use `node --trace-warnings ...` to show where the warning was created)
+Apr 02 05:42:58  [34m│[0m        
+Apr 02 05:42:58  [34m│[0m        added 848 packages, and audited 849 packages in 13s
+Apr 02 05:42:58  [34m│[0m        
+Apr 02 05:42:58  [34m│[0m        116 packages are looking for funding
+Apr 02 05:42:58  [34m│[0m          run `npm fund` for details
+Apr 02 05:42:58  [34m│[0m        
+Apr 02 05:42:58  [34m│[0m        13 vulnerabilities (6 low, 4 moderate, 3 high)
+Apr 02 05:42:58  [34m│[0m        
+Apr 02 05:42:58  [34m│[0m        To address issues that do not require attention, run:
+Apr 02 05:42:58  [34m│[0m          npm audit fix
+Apr 02 05:42:58  [34m│[0m        
+Apr 02 05:42:58  [34m│[0m        To address all issues (including breaking changes), run:
+Apr 02 05:42:58  [34m│[0m          npm audit fix --force
+Apr 02 05:42:58  [34m│[0m        
+Apr 02 05:42:58  [34m│[0m        Run `npm audit` for details.
+Apr 02 05:42:59  [34m│[0m        
+Apr 02 05:42:59  [34m│[0m -----> Build
+Apr 02 05:42:59  [34m│[0m        
+Apr 02 05:42:59  [34m│[0m -----> Caching build
+Apr 02 05:42:59  [34m│[0m        - npm cache
+Apr 02 05:42:59  [34m│[0m        
+Apr 02 05:42:59  [34m│[0m -----> Pruning devDependencies
+Apr 02 05:42:59  [34m│[0m        Skipping because NODE_ENV is not 'production'
+Apr 02 05:42:59  [34m│[0m        
+Apr 02 05:42:59  [34m│[0m -----> Build succeeded!
+Apr 02 05:42:59  [34m│[0m Running custom build command: npm install
+Apr 02 05:42:59  [34m│[0m npm run build
+Apr 02 05:43:00  [34m│[0m (node:3615) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+Apr 02 05:43:00  [34m│[0m (Use `node --trace-warnings ...` to show where the warning was created)
+Apr 02 05:43:01  [34m│[0m 
+Apr 02 05:43:01  [34m│[0m up to date, audited 849 packages in 2s
+Apr 02 05:43:01  [34m│[0m 
+Apr 02 05:43:01  [34m│[0m 116 packages are looking for funding
+Apr 02 05:43:01  [34m│[0m   run `npm fund` for details
+Apr 02 05:43:01  [34m│[0m 
+Apr 02 05:43:01  [34m│[0m 13 vulnerabilities (6 low, 4 moderate, 3 high)
+Apr 02 05:43:01  [34m│[0m 
+Apr 02 05:43:01  [34m│[0m To address issues that do not require attention, run:
+Apr 02 05:43:01  [34m│[0m   npm audit fix
+Apr 02 05:43:01  [34m│[0m 
+Apr 02 05:43:01  [34m│[0m To address all issues (including breaking changes), run:
+Apr 02 05:43:01  [34m│[0m   npm audit fix --force
+Apr 02 05:43:01  [34m│[0m 
+Apr 02 05:43:01  [34m│[0m Run `npm audit` for details.
+Apr 02 05:43:01  [34m│[0m npm notice
+Apr 02 05:43:01  [34m│[0m npm notice New major version of npm available! 10.9.4 -> 11.12.1
+Apr 02 05:43:01  [34m│[0m npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+Apr 02 05:43:01  [34m│[0m npm notice To update run: npm install -g npm@11.12.1
+Apr 02 05:43:01  [34m│[0m npm notice
+Apr 02 05:43:01  [34m│[0m 
+Apr 02 05:43:01  [34m│[0m > rest-express@1.0.0 build
+Apr 02 05:43:01  [34m│[0m > tsx script/build.ts
+Apr 02 05:43:01  [34m│[0m 
+Apr 02 05:43:02  [34m│[0m building client...
+Apr 02 05:43:02  [34m│[0m vite v7.3.1 building client environment for production...
+Apr 02 05:43:02  [34m│[0m transforming...
+Apr 02 05:43:02  [34m│[0m Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+Apr 02 05:43:02  [34m│[0m   npx update-browserslist-db@latest
+Apr 02 05:43:02  [34m│[0m   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Apr 02 05:43:03  [34m│[0m 
+Apr 02 05:43:03  [34m│[0m A PostCSS plugin did not pass the `from` option to `postcss.parse`. This may cause imported assets to be incorrectly transformed. If you've recently added a PostCSS plugin that raised this warning, please contact the package author to fix the issue.
+Apr 02 05:43:05  [34m│[0m ✓ 1872 modules transformed.
+Apr 02 05:43:06  [34m│[0m rendering chunks...
+Apr 02 05:43:06  [34m│[0m computing gzip size...
+Apr 02 05:43:06  [34m│[0m ../dist/public/index.html                                         2.09 kB │ gzip:   0.79 kB
+Apr 02 05:43:06  [34m│[0m ../dist/public/assets/signsalesiq-logo-v2-trimmed-adTf7I_b.png   31.62 kB
+Apr 02 05:43:06  [34m│[0m ../dist/public/assets/index-Dd3xGm3r.css                        129.79 kB │ gzip:  19.54 kB
+Apr 02 05:43:06  [34m│[0m ../dist/public/assets/index-BUWUQgvE.js                         789.26 kB │ gzip: 219.45 kB
+Apr 02 05:43:06  [34m│[0m 
+Apr 02 05:43:06  [34m│[0m (!) Some chunks are larger than 500 kB after minification. Consider:
+Apr 02 05:43:06  [34m│[0m - Using dynamic import() to code-split the application
+Apr 02 05:43:06  [34m│[0m - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+Apr 02 05:43:06  [34m│[0m - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+Apr 02 05:43:06  [34m│[0m ✓ built in 3.50s
+Apr 02 05:43:06  [34m│[0m building server...
+Apr 02 05:43:06  [34m│[0m 
+Apr 02 05:43:06  [34m│[0m   dist/index.cjs  2.6mb ⚠️
+Apr 02 05:43:06  [34m│[0m 
+Apr 02 05:43:06  [34m│[0m ⚡ Done in 196ms
+Apr 02 05:43:06  [34m│[0m copying uploads directory...
+Apr 02 05:43:13  [34m│[0m copying migrations directory...
+Apr 02 05:43:13  [34m│[0m copying seed-export.json...
+Apr 02 05:43:13  [34m│[0m   ✓ seed-export.json copied to dist/
+Apr 02 05:43:13  [34m│[0m Timer: Builder ran for 33.390139321s and ended at 2026-04-02T05:43:13Z
+Apr 02 05:43:14  [34m╰───────────────────────────────────╼[0m
+Apr 02 05:43:14  
+Apr 02 05:43:14  [34m╭────────────[34m[30m[44m app upload [0m[0m[34m───────────╼[0m
+Apr 02 05:43:14  [34m│[0m [34m › uploading app container image to DOCR[0m
+Apr 02 05:43:14  [34m│[0m Reusing layers from image <registry-uri-0>
+Apr 02 05:43:14  [34m│[0m Timer: Exporter started at 2026-04-02T05:43:14Z
+Apr 02 05:43:14  [34m│[0m Reusing layer 'heroku/nodejs:profile'
+Apr 02 05:44:26  [34m│[0m Adding 1/1 app layer(s)
+Apr 02 05:44:26  [34m│[0m Reusing layer 'buildpacksio/lifecycle:launcher'
+Apr 02 05:44:26  [34m│[0m Reusing layer 'buildpacksio/lifecycle:config'
+Apr 02 05:44:26  [34m│[0m Reusing layer 'buildpacksio/lifecycle:process-types'
+Apr 02 05:44:26  [34m│[0m Adding label 'io.buildpacks.lifecycle.metadata'
+Apr 02 05:44:26  [34m│[0m Adding label 'io.buildpacks.build.metadata'
+Apr 02 05:44:26  [34m│[0m Adding label 'io.buildpacks.project.metadata'
+Apr 02 05:44:26  [34m│[0m Setting default process type 'web'
+Apr 02 05:44:26  [34m│[0m Timer: Saving <image-1>... started at 2026-04-02T05:44:26Z
+Apr 02 05:47:00  [34m│[0m *** Images (sha256:9abe9e33f11b22384264a889b93ffdb52a535dda347f9199d32d62c21ef93cb9):
+Apr 02 05:47:00  [34m│[0m       <image-2>
+Apr 02 05:47:00  [34m│[0m Timer: Saving <image-3>... ran for 2m33.609642008s and ended at 2026-04-02T05:47:00Z
+Apr 02 05:47:00  [34m│[0m Timer: Exporter ran for 3m45.944701301s and ended at 2026-04-02T05:47:00Z
+Apr 02 05:47:00  [34m│[0m Timer: Cache started at 2026-04-02T05:47:00Z
+Apr 02 05:47:01  [34m│[0m Adding cache layer 'heroku/nodejs:shim'
+Apr 02 05:47:07  [34m│[0m Timer: Cache ran for 7.205485278s and ended at 2026-04-02T05:47:07Z
+Apr 02 05:47:08  [34m│[0m [32m ✔ uploaded app image to DOCR[0m
+Apr 02 05:47:08  [34m╰────────────────────────────────────╼[0m
+Apr 02 05:47:08  
+Apr 02 05:47:08  [32m ✔ [0m[30m[42m build complete [0m[0m
+Apr 02 05:47:08  

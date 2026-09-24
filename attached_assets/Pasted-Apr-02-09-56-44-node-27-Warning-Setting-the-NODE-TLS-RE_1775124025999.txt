@@ -1,0 +1,69 @@
+Apr 02 09:56:44  (node:27) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+Apr 02 09:56:44  (Use `node --trace-warnings ...` to show where the warning was created)
+Apr 02 09:56:44  [DB] Migrations complete.
+Apr 02 09:56:44  Ensured VEHICLE location_type enum value exists
+Apr 02 09:56:44  [AutoSeed] Warning syncing signTypes batch 0: duplicate key value violates unique constraint "sign_types_name_unique"
+Apr 02 09:56:44  [AutoSeed]   ↺ Config synced: signTypes (47 rows)
+Apr 02 09:56:44  [AutoSeed] Warning syncing emailTemplates batch 0: duplicate key value violates unique constraint "email_templates_template_key_unique"
+Apr 02 09:56:44  [AutoSeed]   ↺ Config synced: emailTemplates (6 rows)
+Apr 02 09:56:44  [AutoSeed]   ↺ Config synced: signTypeReferences (156 rows)
+Apr 02 09:56:44  [AutoSeed]   ↺ Config synced: mockupFeedback (17 rows)
+Apr 02 09:56:44  [AutoSeed] FORCE_SEED=true — running full import on existing DB (9 tenants). All inserts are idempotent.
+Apr 02 09:56:44  [AutoSeed]   ✓ tenants (10 rows)
+Apr 02 09:56:44  [AutoSeed]   ✓ users (17 rows)
+Apr 02 09:56:44  [AutoSeed] Warning importing passwordResetTokens batch 0: insert or update on table "password_reset_tokens" violates foreign key constraint "password_reset_tokens_user_id_users_id_fk"
+Apr 02 09:56:44  [AutoSeed]   ✓ passwordResetTokens (8 rows)
+Apr 02 09:56:44  [AutoSeed] Warning importing opportunities batch 0: insert or update on table "opportunities" violates foreign key constraint "opportunities_owner_id_users_id_fk"
+Apr 02 09:56:44  [AutoSeed]   ✓ opportunities (42 rows)
+Apr 02 09:56:44  [AutoSeed] Warning importing assets batch 0: insert or update on table "assets" violates foreign key constraint "assets_opportunity_id_opportunities_id_fk"
+Apr 02 09:56:44  [AutoSeed] Warning importing assets batch 100: insert or update on table "assets" violates foreign key constraint "assets_opportunity_id_opportunities_id_fk"
+Apr 02 09:56:44  [AutoSeed]   ✓ assets (103 rows)
+Apr 02 09:56:44  [AutoSeed] Warning importing signSpecs batch 0: insert or update on table "sign_specs" violates foreign key constraint "sign_specs_opportunity_id_opportunities_id_fk"
+Apr 02 09:56:44  [AutoSeed]   ✓ signSpecs (51 rows)
+Apr 02 09:56:44  [AutoSeed] Warning importing planes batch 0: insert or update on table "planes" violates foreign key constraint "planes_opportunity_id_opportunities_id_fk"
+Apr 02 09:56:44  [AutoSeed]   ✓ planes (46 rows)
+Apr 02 09:56:44  [AutoSeed] Warning importing outputs batch 0: insert or update on table "outputs" violates foreign key constraint "outputs_opportunity_id_opportunities_id_fk"
+Apr 02 09:56:44  [AutoSeed]   ✓ outputs (58 rows)
+Apr 02 09:56:44  [AutoSeed] Warning importing exports batch 0: insert or update on table "exports" violates foreign key constraint "exports_opportunity_id_opportunities_id_fk"
+Apr 02 09:56:44  [AutoSeed]   ✓ exports (43 rows)
+Apr 02 09:56:44  [AutoSeed] Warning importing productRules batch 0: insert or update on table "product_rules" violates foreign key constraint "product_rules_tenant_id_tenants_id_fk"
+Apr 02 09:56:44  [AutoSeed]   ✓ productRules (58 rows)
+Apr 02 09:56:44  [AutoSeed]   ✓ emailLogs (90 rows)
+Apr 02 09:56:44  [AutoSeed]   ✓ activityLogs (35 rows)
+Apr 02 09:56:44  [AutoSeed] ✅ Full import complete — 561 rows loaded.
+Apr 02 09:56:44  Seeding tenants and users...
+Apr 02 09:56:45  Users and tenants seeded successfully.
+Apr 02 09:56:45  9:56:45 AM [express] serving on port 8080
+Apr 02 09:56:45  9:56:45 AM [express] environment: production
+Apr 02 09:56:45  9:56:45 AM [express] health check: http://0.0.0.0:8080/health
+Apr 02 09:56:45  
+Apr 02 09:56:45  ===========================================
+Apr 02 09:56:45    SignSalesIQ - Startup Configuration
+Apr 02 09:56:45  ===========================================
+Apr 02 09:56:45    Environment   : production
+Apr 02 09:56:45    Port          : 8080
+Apr 02 09:56:45    Database      : postgresql:***@signsalesiq-productions-do-user-33441100-0.m.db.ondigitalocean.com:25060/defaultdb?sslmode=require
+Apr 02 09:56:45    Replit        : no
+Apr 02 09:56:45  
+Apr 02 09:56:45    --- AI Services ---
+Apr 02 09:56:45    Vertex API Key          : (not set)
+Apr 02 09:56:45    Google API Key          : ***set***
+Apr 02 09:56:45    Gemini Integrations Key : ***set***
+Apr 02 09:56:45    Gemini Base URL         : http://localhost:1106/modelfarm/gemini
+Apr 02 09:56:45  
+Apr 02 09:56:45    --- Email ---
+Apr 02 09:56:45    Resend API Key : (not set)
+Apr 02 09:56:45    SMTP From      : info@installiq.ai
+Apr 02 09:56:45    SMTP Pass      : ***set***
+Apr 02 09:56:45  
+Apr 02 09:56:45    --- Stripe ---
+Apr 02 09:56:45    Secret Key     : ***set***
+Apr 02 09:56:45    Webhook Secret : (not set)
+Apr 02 09:56:45  
+Apr 02 09:56:45    --- Object Storage ---
+Apr 02 09:56:45    Bucket ID : ***set***
+Apr 02 09:56:45  ===========================================
+Apr 02 09:56:45  
+Apr 02 09:56:45  [Email] SMTP configured: host=smtp0001.neo.space port=587 user=info@installiq.ai pass=ins*** (len=13)
+Apr 02 09:56:45  Starting plan expiration scheduler (runs every 12 hours)
+Apr 02 09:56:45  [Email] SMTP connection verified OK

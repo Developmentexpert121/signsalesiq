@@ -1,0 +1,166 @@
+Mar 20 14:37:12  Cloud download failed for uploads/1773678662245_oo1uhgcfzpm.jpg: GaxiosError: request to http://127.0.0.1:1106/credential failed, reason: connect ECONNREFUSED 127.0.0.1:1106
+Mar 20 14:37:12      at Gaxios._request (/workspace/node_modules/@google-cloud/storage/node_modules/gaxios/build/src/gaxios.js:149:19)
+Mar 20 14:37:12      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Mar 20 14:37:12      at async UrlSubjectTokenSupplier.getSubjectToken (/workspace/node_modules/@google-cloud/storage/node_modules/google-auth-library/build/src/auth/urlsubjecttokensupplier.js:54:30)
+Mar 20 14:37:12      at async IdentityPoolClient._BaseExternalAccountClient_internalRefreshAccessTokenAsync (/workspace/node_modules/@google-cloud/storage/node_modules/google-auth-library/build/src/auth/baseexternalclient.js:408:26) {
+Mar 20 14:37:12    config: {
+Mar 20 14:37:12      retry: true,
+Mar 20 14:37:12      retryConfig: {
+Mar 20 14:37:12    response: undefined,
+Mar 20 14:37:12    error: FetchError: request to http://127.0.0.1:1106/credential failed, reason: connect ECONNREFUSED 127.0.0.1:1106
+Mar 20 14:37:12        at ClientRequest.<anonymous> (/workspace/node_modules/@google-cloud/storage/node_modules/node-fetch/lib/index.js:1501:11)
+Mar 20 14:37:12        at ClientRequest.emit (node:events:519:28)
+Mar 20 14:37:12        at emitErrorEvent (node:_http_client:107:11)
+Mar 20 14:37:12        at Socket.socketErrorListener (node:_http_client:574:5)
+Mar 20 14:37:12        at Socket.emit (node:events:519:28)
+Mar 20 14:37:12        at emitErrorNT (node:internal/streams/destroy:170:8)
+Mar 20 14:37:12        at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+Mar 20 14:37:12        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+Mar 20 14:37:12      type: 'system',
+Mar 20 14:37:12      errno: 'ECONNREFUSED',
+Mar 20 14:37:12      code: 'ECONNREFUSED'
+Mar 20 14:37:12    },
+Mar 20 14:37:12    code: 'ECONNREFUSED',
+Mar 20 14:37:12    [Symbol(gaxios-gaxios-error)]: '6.7.1'
+Mar 20 14:37:12  }
+Mar 20 14:37:12  2:37:12 PM [express] GET /api/uploads/1773430214233_rgrl4iupq28.jpg 404 in 641ms :: {"message":"File not found"}
+Mar 20 14:37:12  2:37:12 PM [express] GET /api/uploads/1773941557768_xyyqbmth3ll.png 404 in 614ms :: {"message":"File not found"}
+Mar 20 14:37:12  2:37:12 PM [express] GET /api/uploads/1773245602390_bltax6bjryp.jpg 404 in 645ms :: {"message":"File not found"}
+Mar 20 14:37:12        httpMethodsToRetry: [Array],
+Mar 20 14:37:12        currentRetryAttempt: 2,
+Mar 20 14:37:12        retry: 3,
+Mar 20 14:37:12        noResponseRetries: 2,
+Mar 20 14:37:12        retryDelayMultiplier: 2,
+Mar 20 14:37:12        timeOfFirstRequest: 1774017432166,
+Mar 20 14:37:12        totalTimeout: 9007199254740991,
+Mar 20 14:37:12        maxRetryDelay: 9007199254740991,
+Mar 20 14:37:12        statusCodesToRetry: [Array]
+Mar 20 14:37:12      },
+Mar 20 14:37:12      url: 'http://127.0.0.1:1106/credential',
+Mar 20 14:37:12      method: 'GET',
+Mar 20 14:37:12      headers: {
+Mar 20 14:37:12        'User-Agent': 'google-api-nodejs-client/9.15.1',
+Mar 20 14:37:12        'x-goog-api-client': 'gl-node/22.22.0',
+Mar 20 14:37:12        Accept: 'application/json'
+Mar 20 14:37:12      },
+Mar 20 14:37:12      responseType: 'json',
+Mar 20 14:37:12      paramsSerializer: [Function: paramsSerializer],
+Mar 20 14:37:12      validateStatus: [Function: validateStatus],
+Mar 20 14:37:12      errorRedactor: [Function: defaultErrorRedactor]
+Mar 20 14:37:12    },
+Mar 20 14:37:12    response: undefined,
+Mar 20 14:37:12    error: FetchError: request to http://127.0.0.1:1106/credential failed, reason: connect ECONNREFUSED 127.0.0.1:1106
+Mar 20 14:37:12        at ClientRequest.<anonymous> (/workspace/node_modules/@google-cloud/storage/node_modules/node-fetch/lib/index.js:1501:11)
+Mar 20 14:37:12        at ClientRequest.emit (node:events:519:28)
+Mar 20 14:37:12        at emitErrorEvent (node:_http_client:107:11)
+Mar 20 14:37:12        at Socket.socketErrorListener (node:_http_client:574:5)
+Mar 20 14:37:12        at Socket.emit (node:events:519:28)
+Mar 20 14:37:12        at emitErrorNT (node:internal/streams/destroy:170:8)
+Mar 20 14:37:12        at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+Mar 20 14:37:12        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+Mar 20 14:37:12      type: 'system',
+Mar 20 14:37:12      errno: 'ECONNREFUSED',
+Mar 20 14:37:12      code: 'ECONNREFUSED'
+Mar 20 14:37:12    },
+Mar 20 14:37:12    code: 'ECONNREFUSED',
+Mar 20 14:37:12    [Symbol(gaxios-gaxios-error)]: '6.7.1'
+Mar 20 14:37:12  }
+Mar 20 14:37:12  Cloud download failed for uploads/1772551635313_ywxksi2js2p.jpg: GaxiosError: request to http://127.0.0.1:1106/credential failed, reason: connect ECONNREFUSED 127.0.0.1:1106
+Mar 20 14:37:12      at Gaxios._request (/workspace/node_modules/@google-cloud/storage/node_modules/gaxios/build/src/gaxios.js:149:19)
+Mar 20 14:37:12      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Mar 20 14:37:12      at async UrlSubjectTokenSupplier.getSubjectToken (/workspace/node_modules/@google-cloud/storage/node_modules/google-auth-library/build/src/auth/urlsubjecttokensupplier.js:54:30)
+Mar 20 14:37:12      at async IdentityPoolClient._BaseExternalAccountClient_internalRefreshAccessTokenAsync (/workspace/node_modules/@google-cloud/storage/node_modules/google-auth-library/build/src/auth/baseexternalclient.js:408:26) {
+Mar 20 14:37:12    config: {
+Mar 20 14:37:12      retry: true,
+Mar 20 14:37:12      retryConfig: {
+Mar 20 14:37:12        httpMethodsToRetry: [Array],
+Mar 20 14:37:12        currentRetryAttempt: 2,
+Mar 20 14:37:12        retry: 3,
+Mar 20 14:37:12        noResponseRetries: 2,
+Mar 20 14:37:12        retryDelayMultiplier: 2,
+Mar 20 14:37:12        timeOfFirstRequest: 1774017432166,
+Mar 20 14:37:12        totalTimeout: 9007199254740991,
+Mar 20 14:37:12        maxRetryDelay: 9007199254740991,
+Mar 20 14:37:12        statusCodesToRetry: [Array]
+Mar 20 14:37:12      },
+Mar 20 14:37:12      url: 'http://127.0.0.1:1106/credential',
+Mar 20 14:37:12      method: 'GET',
+Mar 20 14:37:12      headers: {
+Mar 20 14:37:12        'User-Agent': 'google-api-nodejs-client/9.15.1',
+Mar 20 14:37:12        'x-goog-api-client': 'gl-node/22.22.0',
+Mar 20 14:37:12        Accept: 'application/json'
+Mar 20 14:37:12      },
+Mar 20 14:37:12      responseType: 'json',
+Mar 20 14:37:12      paramsSerializer: [Function: paramsSerializer],
+Mar 20 14:37:12      validateStatus: [Function: validateStatus],
+Mar 20 14:37:12      errorRedactor: [Function: defaultErrorRedactor]
+Mar 20 14:37:12    },
+Mar 20 14:37:12    response: undefined,
+Mar 20 14:37:12    error: FetchError: request to http://127.0.0.1:1106/credential failed, reason: connect ECONNREFUSED 127.0.0.1:1106
+Mar 20 14:37:12        at ClientRequest.<anonymous> (/workspace/node_modules/@google-cloud/storage/node_modules/node-fetch/lib/index.js:1501:11)
+Mar 20 14:37:12        at ClientRequest.emit (node:events:519:28)
+Mar 20 14:37:12        at emitErrorEvent (node:_http_client:107:11)
+Mar 20 14:37:12        at Socket.socketErrorListener (node:_http_client:574:5)
+Mar 20 14:37:12        at Socket.emit (node:events:519:28)
+Mar 20 14:37:12        at emitErrorNT (node:internal/streams/destroy:170:8)
+Mar 20 14:37:12        at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+Mar 20 14:37:12        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+Mar 20 14:37:12      type: 'system',
+Mar 20 14:37:12      errno: 'ECONNREFUSED',
+Mar 20 14:37:12      code: 'ECONNREFUSED'
+Mar 20 14:37:12    },
+Mar 20 14:37:12    code: 'ECONNREFUSED',
+Mar 20 14:37:12    [Symbol(gaxios-gaxios-error)]: '6.7.1'
+Mar 20 14:37:12  }
+Mar 20 14:37:12  Cloud download failed for uploads/1772898613153_fdvuoy8qqzg.jpg: GaxiosError: request to http://127.0.0.1:1106/credential failed, reason: connect ECONNREFUSED 127.0.0.1:1106
+Mar 20 14:37:12      at Gaxios._request (/workspace/node_modules/@google-cloud/storage/node_modules/gaxios/build/src/gaxios.js:149:19)
+Mar 20 14:37:12      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Mar 20 14:37:12      at async UrlSubjectTokenSupplier.getSubjectToken (/workspace/node_modules/@google-cloud/storage/node_modules/google-auth-library/build/src/auth/urlsubjecttokensupplier.js:54:30)
+Mar 20 14:37:12      at async IdentityPoolClient._BaseExternalAccountClient_internalRefreshAccessTokenAsync (/workspace/node_modules/@google-cloud/storage/node_modules/google-auth-library/build/src/auth/baseexternalclient.js:408:26) {
+Mar 20 14:37:12    config: {
+Mar 20 14:37:12      retry: true,
+Mar 20 14:37:12      retryConfig: {
+Mar 20 14:37:12        httpMethodsToRetry: [Array],
+Mar 20 14:37:12        currentRetryAttempt: 2,
+Mar 20 14:37:12        retry: 3,
+Mar 20 14:37:12        noResponseRetries: 2,
+Mar 20 14:37:12        retryDelayMultiplier: 2,
+Mar 20 14:37:12        timeOfFirstRequest: 1774017432166,
+Mar 20 14:37:12        totalTimeout: 9007199254740991,
+Mar 20 14:37:12        maxRetryDelay: 9007199254740991,
+Mar 20 14:37:12        statusCodesToRetry: [Array]
+Mar 20 14:37:12      },
+Mar 20 14:37:12      url: 'http://127.0.0.1:1106/credential',
+Mar 20 14:37:12      method: 'GET',
+Mar 20 14:37:12      headers: {
+Mar 20 14:37:12        'User-Agent': 'google-api-nodejs-client/9.15.1',
+Mar 20 14:37:12        'x-goog-api-client': 'gl-node/22.22.0',
+Mar 20 14:37:12        Accept: 'application/json'
+Mar 20 14:37:12      },
+Mar 20 14:37:12      responseType: 'json',
+Mar 20 14:37:12      paramsSerializer: [Function: paramsSerializer],
+Mar 20 14:37:12      validateStatus: [Function: validateStatus],
+Mar 20 14:37:12      errorRedactor: [Function: defaultErrorRedactor]
+Mar 20 14:37:12    },
+Mar 20 14:37:12    response: undefined,
+Mar 20 14:37:12    error: FetchError: request to http://127.0.0.1:1106/credential failed, reason: connect ECONNREFUSED 127.0.0.1:1106
+Mar 20 14:37:12        at ClientRequest.<anonymous> (/workspace/node_modules/@google-cloud/storage/node_modules/node-fetch/lib/index.js:1501:11)
+Mar 20 14:37:12        at ClientRequest.emit (node:events:519:28)
+Mar 20 14:37:12        at emitErrorEvent (node:_http_client:107:11)
+Mar 20 14:37:12        at Socket.socketErrorListener (node:_http_client:574:5)
+Mar 20 14:37:12        at Socket.emit (node:events:519:28)
+Mar 20 14:37:12        at emitErrorNT (node:internal/streams/destroy:170:8)
+Mar 20 14:37:12        at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+Mar 20 14:37:12        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+Mar 20 14:37:12      type: 'system',
+Mar 20 14:37:12      errno: 'ECONNREFUSED',
+Mar 20 14:37:12      code: 'ECONNREFUSED'
+Mar 20 14:37:12    },
+Mar 20 14:37:12    code: 'ECONNREFUSED',
+Mar 20 14:37:12    [Symbol(gaxios-gaxios-error)]: '6.7.1'
+Mar 20 14:37:12  }
+Mar 20 14:37:12  2:37:12 PM [express] GET /api/uploads/1773678662245_oo1uhgcfzpm.jpg 404 in 615ms :: {"message":"File not found"}
+Mar 20 14:37:12  2:37:12 PM [express] GET /api/uploads/1772898613153_fdvuoy8qqzg.jpg 404 in 581ms :: {"message":"File not found"}
+Mar 20 14:37:12  2:37:12 PM [express] GET /api/uploads/1773156118813_rum73f1oo3.jpg 404 in 631ms :: {"message":"File not found"}
+Mar 20 14:37:12  2:37:12 PM [express] GET /api/uploads/1772551635313_ywxksi2js2p.jpg 404 in 619ms :: {"message":"File not found"}
+Mar 20 15:15:11  3:15:11 PM [express] GET /api/auth/me 401 in 1ms :: {"message":"Not authenticated"}

@@ -1,0 +1,329 @@
+Apr 29 06:10:11    SignSalesIQ - Startup Configuration
+Apr 29 06:10:11  ===========================================
+Apr 29 06:10:11    Environment   : production
+Apr 29 06:10:11    Port          : 8080
+Apr 29 06:10:11    Database      : postgresql:***@signsalesiq-productions-do-user-33441100-0.m.db.ondigitalocean.com:25060/defaultdb?sslmode=require
+Apr 29 06:10:11    Replit        : no
+Apr 29 06:10:11  
+Apr 29 06:10:11    --- AI Services ---
+Apr 29 06:10:11    Vertex API Key          : (not set)
+Apr 29 06:10:11    Google API Key          : ***set***
+Apr 29 06:10:11    Gemini Integrations Key : ***set***
+Apr 29 06:10:11    Gemini Base URL         : http://localhost:1106/modelfarm/gemini
+Apr 29 06:10:11  
+Apr 29 06:10:11    --- Email ---
+Apr 29 06:10:11    Resend API Key : (not set)
+Apr 29 06:10:11    SMTP From      : info@installiq.ai
+Apr 29 06:10:11    SMTP Pass      : ***set***
+Apr 29 06:10:11  
+Apr 29 06:10:11    --- Stripe ---
+Apr 29 06:10:11    Secret Key     : ***set***
+Apr 29 06:10:11    Webhook Secret : (not set)
+Apr 29 06:10:11  
+Apr 29 06:10:11    --- Object Storage ---
+Apr 29 06:10:11    Bucket ID : ***set***
+Apr 29 06:10:11  ===========================================
+Apr 29 06:10:11  
+Apr 29 06:10:11  [Email] SMTP configured: host=smtp0001.neo.space port=587 user=info@installiq.ai pass=ins*** (len=13)
+Apr 29 06:10:11  Starting plan expiration scheduler (runs every 12 hours)
+Apr 29 06:10:11  [Email] SMTP connection verified OK
+Apr 29 06:10:18  Internal Server Error: error: column "signsuiteiq_user_id" does not exist
+Apr 29 06:10:18      at /workspace/dist/index.cjs:68:13356
+Apr 29 06:10:18      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Apr 29 06:10:18      at async /workspace/dist/index.cjs:74:38105
+Apr 29 06:10:18      at async rL.getUser (/workspace/dist/index.cjs:202:3203)
+Apr 29 06:10:18      at async /workspace/dist/index.cjs:1366:4612 {
+Apr 29 06:10:18    length: 120,
+Apr 29 06:10:18    severity: 'ERROR',
+Apr 29 06:10:18    code: '42703',
+Apr 29 06:10:18    detail: undefined,
+Apr 29 06:10:18    hint: undefined,
+Apr 29 06:10:18    position: '109',
+Apr 29 06:10:18    internalPosition: undefined,
+Apr 29 06:10:18    internalQuery: undefined,
+Apr 29 06:10:18    where: undefined,
+Apr 29 06:10:18    schema: undefined,
+Apr 29 06:10:18    table: undefined,
+Apr 29 06:10:18    column: undefined,
+Apr 29 06:10:18    dataType: undefined,
+Apr 29 06:10:18    constraint: undefined,
+Apr 29 06:10:18    file: 'parse_relation.c',
+Apr 29 06:10:18    line: '3822',
+Apr 29 06:10:18    routine: 'errorMissingColumn'
+Apr 29 06:10:18  }
+Apr 29 06:10:18  6:10:18 AM [express] GET /api/auth/me 500 in 39ms :: {"message":"column \"signsuiteiq_user_id\" does not exist"}
+Apr 29 06:10:18  Internal Server Error: error: column "signsuiteiq_user_id" does not exist
+Apr 29 06:10:18      at /workspace/dist/index.cjs:68:13356
+Apr 29 06:10:18      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Apr 29 06:10:18      at async /workspace/dist/index.cjs:74:38105
+Apr 29 06:10:18      at async rL.getUser (/workspace/dist/index.cjs:202:3203)
+Apr 29 06:10:18      at async /workspace/dist/index.cjs:1366:4612 {
+Apr 29 06:10:18    length: 120,
+Apr 29 06:10:18    severity: 'ERROR',
+Apr 29 06:10:18    code: '42703',
+Apr 29 06:10:18    detail: undefined,
+Apr 29 06:10:18    hint: undefined,
+Apr 29 06:10:18    position: '109',
+Apr 29 06:10:18    internalPosition: undefined,
+Apr 29 06:10:18    internalQuery: undefined,
+Apr 29 06:10:18    where: undefined,
+Apr 29 06:10:18    schema: undefined,
+Apr 29 06:10:18    table: undefined,
+Apr 29 06:10:18    column: undefined,
+Apr 29 06:10:18    dataType: undefined,
+Apr 29 06:10:18    constraint: undefined,
+Apr 29 06:10:18    file: 'parse_relation.c',
+Apr 29 06:10:18    line: '3822',
+Apr 29 06:10:18    routine: 'errorMissingColumn'
+Apr 29 06:10:18  }
+Apr 29 06:10:18  6:10:18 AM [express] GET /api/auth/me 500 in 64ms :: {"message":"column \"signsuiteiq_user_id\" does not exist"}
+Apr 29 06:10:19  Internal Server Error: error: column "signsuiteiq_user_id" does not exist
+Apr 29 06:10:19      at /workspace/dist/index.cjs:68:13356
+Apr 29 06:10:19      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Apr 29 06:10:19      at async /workspace/dist/index.cjs:74:38105
+Apr 29 06:10:19      at async rL.getUser (/workspace/dist/index.cjs:202:3203)
+Apr 29 06:10:19      at async /workspace/dist/index.cjs:1366:4612 {
+Apr 29 06:10:19    length: 120,
+Apr 29 06:10:19    severity: 'ERROR',
+Apr 29 06:10:19    code: '42703',
+Apr 29 06:10:19    detail: undefined,
+Apr 29 06:10:19    hint: undefined,
+Apr 29 06:10:19    position: '109',
+Apr 29 06:10:19    internalPosition: undefined,
+Apr 29 06:10:19    internalQuery: undefined,
+Apr 29 06:10:19    where: undefined,
+Apr 29 06:10:19    schema: undefined,
+Apr 29 06:10:19    table: undefined,
+Apr 29 06:10:19    column: undefined,
+Apr 29 06:10:19    dataType: undefined,
+Apr 29 06:10:19    constraint: undefined,
+Apr 29 06:10:19    file: 'parse_relation.c',
+Apr 29 06:10:19    line: '3822',
+Apr 29 06:10:19    routine: 'errorMissingColumn'
+Apr 29 06:10:19  }
+Apr 29 06:10:19  6:10:19 AM [express] GET /api/auth/me 500 in 68ms :: {"message":"column \"signsuiteiq_user_id\" does not exist"}
+Apr 29 06:10:21  Internal Server Error: error: column "signsuiteiq_user_id" does not exist
+Apr 29 06:10:21      at /workspace/dist/index.cjs:68:13356
+Apr 29 06:10:21      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Apr 29 06:10:21      at async /workspace/dist/index.cjs:74:38105
+Apr 29 06:10:21      at async rL.getUser (/workspace/dist/index.cjs:202:3203)
+Apr 29 06:10:21      at async /workspace/dist/index.cjs:1366:4612 {
+Apr 29 06:10:21    length: 120,
+Apr 29 06:10:21    severity: 'ERROR',
+Apr 29 06:10:21    code: '42703',
+Apr 29 06:10:21    detail: undefined,
+Apr 29 06:10:21    hint: undefined,
+Apr 29 06:10:21    position: '109',
+Apr 29 06:10:21    internalPosition: undefined,
+Apr 29 06:10:21    internalQuery: undefined,
+Apr 29 06:10:21    where: undefined,
+Apr 29 06:10:21    schema: undefined,
+Apr 29 06:10:21    table: undefined,
+Apr 29 06:10:21    column: undefined,
+Apr 29 06:10:21    dataType: undefined,
+Apr 29 06:10:21    constraint: undefined,
+Apr 29 06:10:21    file: 'parse_relation.c',
+Apr 29 06:10:21    line: '3822',
+Apr 29 06:10:21    routine: 'errorMissingColumn'
+Apr 29 06:10:21  }
+Apr 29 06:10:21  6:10:21 AM [express] GET /api/auth/me 500 in 50ms :: {"message":"column \"signsuiteiq_user_id\" does not exist"}
+Apr 29 06:10:24  Internal Server Error: error: column "signsuiteiq_user_id" does not exist
+Apr 29 06:10:24      at /workspace/dist/index.cjs:68:13356
+Apr 29 06:10:24      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Apr 29 06:10:24      at async /workspace/dist/index.cjs:74:38105
+Apr 29 06:10:24      at async rL.getUser (/workspace/dist/index.cjs:202:3203)
+Apr 29 06:10:24      at async /workspace/dist/index.cjs:1366:4612 {
+Apr 29 06:10:24    length: 120,
+Apr 29 06:10:24    severity: 'ERROR',
+Apr 29 06:10:24    code: '42703',
+Apr 29 06:10:24    detail: undefined,
+Apr 29 06:10:24    hint: undefined,
+Apr 29 06:10:24    position: '109',
+Apr 29 06:10:24    internalPosition: undefined,
+Apr 29 06:10:24    internalQuery: undefined,
+Apr 29 06:10:24    where: undefined,
+Apr 29 06:10:24    schema: undefined,
+Apr 29 06:10:24    table: undefined,
+Apr 29 06:10:24    column: undefined,
+Apr 29 06:10:24    dataType: undefined,
+Apr 29 06:10:24    constraint: undefined,
+Apr 29 06:10:24    file: 'parse_relation.c',
+Apr 29 06:10:24    line: '3822',
+Apr 29 06:10:24    routine: 'errorMissingColumn'
+Apr 29 06:10:24  }
+Apr 29 06:10:24  6:10:24 AM [express] GET /api/auth/me 500 in 58ms :: {"message":"column \"signsuiteiq_user_id\" does not exist"}
+Apr 29 06:10:25  Internal Server Error: error: column "signsuiteiq_user_id" does not exist
+Apr 29 06:10:25      at /workspace/dist/index.cjs:68:13356
+Apr 29 06:10:25      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Apr 29 06:10:25      at async /workspace/dist/index.cjs:74:38105
+Apr 29 06:10:25      at async rL.getUser (/workspace/dist/index.cjs:202:3203)
+Apr 29 06:10:25      at async /workspace/dist/index.cjs:1366:4612 {
+Apr 29 06:10:25    length: 120,
+Apr 29 06:10:25    severity: 'ERROR',
+Apr 29 06:10:25    code: '42703',
+Apr 29 06:10:25    detail: undefined,
+Apr 29 06:10:25    hint: undefined,
+Apr 29 06:10:25    position: '109',
+Apr 29 06:10:25    internalPosition: undefined,
+Apr 29 06:10:25    internalQuery: undefined,
+Apr 29 06:10:25    where: undefined,
+Apr 29 06:10:25    schema: undefined,
+Apr 29 06:10:25    table: undefined,
+Apr 29 06:10:25    column: undefined,
+Apr 29 06:10:25    dataType: undefined,
+Apr 29 06:10:25    constraint: undefined,
+Apr 29 06:10:25    file: 'parse_relation.c',
+Apr 29 06:10:25    line: '3822',
+Apr 29 06:10:25    routine: 'errorMissingColumn'
+Apr 29 06:10:25  }
+Apr 29 06:10:25  6:10:25 AM [express] GET /api/auth/me 500 in 55ms :: {"message":"column \"signsuiteiq_user_id\" does not exist"}
+Apr 29 06:10:25  Internal Server Error: error: column "signsuiteiq_user_id" does not exist
+Apr 29 06:10:25      at /workspace/dist/index.cjs:68:13356
+Apr 29 06:10:25      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Apr 29 06:10:25      at async /workspace/dist/index.cjs:74:38105
+Apr 29 06:10:25      at async rL.getUser (/workspace/dist/index.cjs:202:3203)
+Apr 29 06:10:25      at async /workspace/dist/index.cjs:1366:4612 {
+Apr 29 06:10:25    length: 120,
+Apr 29 06:10:25    severity: 'ERROR',
+Apr 29 06:10:25    code: '42703',
+Apr 29 06:10:25    detail: undefined,
+Apr 29 06:10:25    hint: undefined,
+Apr 29 06:10:25    position: '109',
+Apr 29 06:10:25    internalPosition: undefined,
+Apr 29 06:10:25    internalQuery: undefined,
+Apr 29 06:10:25    where: undefined,
+Apr 29 06:10:25    schema: undefined,
+Apr 29 06:10:25    table: undefined,
+Apr 29 06:10:25    column: undefined,
+Apr 29 06:10:25    dataType: undefined,
+Apr 29 06:10:25    constraint: undefined,
+Apr 29 06:10:25    file: 'parse_relation.c',
+Apr 29 06:10:25    line: '3822',
+Apr 29 06:10:25    routine: 'errorMissingColumn'
+Apr 29 06:10:25  }
+Apr 29 06:10:25  6:10:25 AM [express] GET /api/auth/me 500 in 54ms :: {"message":"column \"signsuiteiq_user_id\" does not exist"}
+Apr 29 06:10:27  Internal Server Error: error: column "signsuiteiq_user_id" does not exist
+Apr 29 06:10:27      at /workspace/dist/index.cjs:68:13356
+Apr 29 06:10:27      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Apr 29 06:10:27      at async /workspace/dist/index.cjs:74:38105
+Apr 29 06:10:27      at async rL.getUser (/workspace/dist/index.cjs:202:3203)
+Apr 29 06:10:27      at async /workspace/dist/index.cjs:1366:4612 {
+Apr 29 06:10:27    length: 120,
+Apr 29 06:10:27    severity: 'ERROR',
+Apr 29 06:10:27    code: '42703',
+Apr 29 06:10:27    detail: undefined,
+Apr 29 06:10:27    hint: undefined,
+Apr 29 06:10:27    position: '109',
+Apr 29 06:10:27    internalPosition: undefined,
+Apr 29 06:10:27    internalQuery: undefined,
+Apr 29 06:10:27    where: undefined,
+Apr 29 06:10:27    schema: undefined,
+Apr 29 06:10:27    table: undefined,
+Apr 29 06:10:27    column: undefined,
+Apr 29 06:10:27    dataType: undefined,
+Apr 29 06:10:27    constraint: undefined,
+Apr 29 06:10:27    file: 'parse_relation.c',
+Apr 29 06:10:27    line: '3822',
+Apr 29 06:10:27    routine: 'errorMissingColumn'
+Apr 29 06:10:27  }
+Apr 29 06:10:27  6:10:27 AM [express] GET /api/auth/me 500 in 84ms :: {"message":"column \"signsuiteiq_user_id\" does not exist"}
+Apr 29 06:10:27  Internal Server Error: error: column "signsuiteiq_user_id" does not exist
+Apr 29 06:10:27      at /workspace/dist/index.cjs:68:13356
+Apr 29 06:10:27      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Apr 29 06:10:27      at async /workspace/dist/index.cjs:74:38105
+Apr 29 06:10:27      at async rL.getUser (/workspace/dist/index.cjs:202:3203)
+Apr 29 06:10:27      at async /workspace/dist/index.cjs:1366:4612 {
+Apr 29 06:10:27    length: 120,
+Apr 29 06:10:27    severity: 'ERROR',
+Apr 29 06:10:27    code: '42703',
+Apr 29 06:10:27    detail: undefined,
+Apr 29 06:10:27    hint: undefined,
+Apr 29 06:10:27    position: '109',
+Apr 29 06:10:27    internalPosition: undefined,
+Apr 29 06:10:27    internalQuery: undefined,
+Apr 29 06:10:27    where: undefined,
+Apr 29 06:10:27    schema: undefined,
+Apr 29 06:10:27    table: undefined,
+Apr 29 06:10:27    column: undefined,
+Apr 29 06:10:27    dataType: undefined,
+Apr 29 06:10:27    constraint: undefined,
+Apr 29 06:10:27    file: 'parse_relation.c',
+Apr 29 06:10:27    line: '3822',
+Apr 29 06:10:27    routine: 'errorMissingColumn'
+Apr 29 06:10:27  }
+Apr 29 06:10:27  6:10:27 AM [express] GET /api/auth/me 500 in 48ms :: {"message":"column \"signsuiteiq_user_id\" does not exist"}
+Apr 29 06:10:28  Internal Server Error: error: column "signsuiteiq_user_id" does not exist
+Apr 29 06:10:28      at /workspace/dist/index.cjs:68:13356
+Apr 29 06:10:28      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Apr 29 06:10:28      at async /workspace/dist/index.cjs:74:38105
+Apr 29 06:10:28      at async rL.getUser (/workspace/dist/index.cjs:202:3203)
+Apr 29 06:10:28      at async /workspace/dist/index.cjs:1366:4612 {
+Apr 29 06:10:28    length: 120,
+Apr 29 06:10:28    severity: 'ERROR',
+Apr 29 06:10:28    code: '42703',
+Apr 29 06:10:28    detail: undefined,
+Apr 29 06:10:28    hint: undefined,
+Apr 29 06:10:28    position: '109',
+Apr 29 06:10:28    internalPosition: undefined,
+Apr 29 06:10:28    internalQuery: undefined,
+Apr 29 06:10:28    where: undefined,
+Apr 29 06:10:28    schema: undefined,
+Apr 29 06:10:28    table: undefined,
+Apr 29 06:10:28    column: undefined,
+Apr 29 06:10:28    dataType: undefined,
+Apr 29 06:10:28    constraint: undefined,
+Apr 29 06:10:28    file: 'parse_relation.c',
+Apr 29 06:10:28    line: '3822',
+Apr 29 06:10:28    routine: 'errorMissingColumn'
+Apr 29 06:10:28  }
+Apr 29 06:10:28  6:10:28 AM [express] GET /api/auth/me 500 in 87ms :: {"message":"column \"signsuiteiq_user_id\" does not exist"}
+Apr 29 06:10:28  Internal Server Error: error: column "signsuiteiq_user_id" does not exist
+Apr 29 06:10:28      at /workspace/dist/index.cjs:68:13356
+Apr 29 06:10:28      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Apr 29 06:10:28      at async /workspace/dist/index.cjs:74:38105
+Apr 29 06:10:28      at async rL.getUser (/workspace/dist/index.cjs:202:3203)
+Apr 29 06:10:28      at async /workspace/dist/index.cjs:1366:4612 {
+Apr 29 06:10:28    length: 120,
+Apr 29 06:10:28    severity: 'ERROR',
+Apr 29 06:10:28    code: '42703',
+Apr 29 06:10:28    detail: undefined,
+Apr 29 06:10:28    hint: undefined,
+Apr 29 06:10:28    position: '109',
+Apr 29 06:10:28    internalPosition: undefined,
+Apr 29 06:10:28    internalQuery: undefined,
+Apr 29 06:10:28    where: undefined,
+Apr 29 06:10:28    schema: undefined,
+Apr 29 06:10:28    table: undefined,
+Apr 29 06:10:28    column: undefined,
+Apr 29 06:10:28    dataType: undefined,
+Apr 29 06:10:28    constraint: undefined,
+Apr 29 06:10:28    file: 'parse_relation.c',
+Apr 29 06:10:28    line: '3822',
+Apr 29 06:10:28    routine: 'errorMissingColumn'
+Apr 29 06:10:28  }
+Apr 29 06:10:28  6:10:28 AM [express] GET /api/auth/me 500 in 55ms :: {"message":"column \"signsuiteiq_user_id\" does not exist"}
+Apr 29 06:10:28  Internal Server Error: error: column "signsuiteiq_user_id" does not exist
+Apr 29 06:10:28      at /workspace/dist/index.cjs:68:13356
+Apr 29 06:10:28      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Apr 29 06:10:28      at async /workspace/dist/index.cjs:74:38105
+Apr 29 06:10:28      at async rL.getUser (/workspace/dist/index.cjs:202:3203)
+Apr 29 06:10:28      at async /workspace/dist/index.cjs:1366:4612 {
+Apr 29 06:10:28    length: 120,
+Apr 29 06:10:28    severity: 'ERROR',
+Apr 29 06:10:28    code: '42703',
+Apr 29 06:10:28    detail: undefined,
+Apr 29 06:10:28    hint: undefined,
+Apr 29 06:10:28    position: '109',
+Apr 29 06:10:28    internalPosition: undefined,
+Apr 29 06:10:28    internalQuery: undefined,
+Apr 29 06:10:28    where: undefined,
+Apr 29 06:10:28    schema: undefined,
+Apr 29 06:10:28    table: undefined,
+Apr 29 06:10:28    column: undefined,
+Apr 29 06:10:28    dataType: undefined,
+Apr 29 06:10:28    constraint: undefined,
+Apr 29 06:10:28    file: 'parse_relation.c',
+Apr 29 06:10:28    line: '3822',
+Apr 29 06:10:28    routine: 'errorMissingColumn'
+Apr 29 06:10:28  }
+Apr 29 06:10:28  6:10:28 AM [express] GET /api/auth/me 500 in 62ms :: {"message":"column \"signsuiteiq_user_id\" does not exist"}

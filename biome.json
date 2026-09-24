@@ -1,0 +1,111 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.4.15/schema.json",
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noArrayIndexKey": "off",
+        "noAssignInExpressions": "off",
+        "noConfusingVoidType": "off",
+        "noImplicitAnyLet": "off",
+        "noShadowRestrictedNames": "off",
+        "noEmptyBlockStatements": "off",
+        "noPrototypeBuiltins": "off",
+        "noGlobalIsNan": "off",
+        "noDoubleEquals": "warn",
+        "useIterableCallbackReturn": "off",
+        "noDuplicateCustomProperties": "off",
+        "noUnknownAtRules": "off",
+        "noEmptyBlock": "off"
+      },
+      "style": {
+        "noNonNullAssertion": "warn",
+        "useImportType": "off",
+        "useTemplate": "off",
+        "useConst": "warn",
+        "useNodejsImportProtocol": "off",
+        "noParameterAssign": "off",
+        "useExportType": "off",
+        "noUselessElse": "off",
+        "noUnusedTemplateLiteral": "off"
+      },
+      "correctness": {
+        "noUnusedVariables": "off",
+        "noUnusedImports": "off",
+        "noUnusedFunctionParameters": "off",
+        "useExhaustiveDependencies": "off",
+        "noUnusedLabels": "warn",
+        "noChildrenProp": "off",
+        "noSwitchDeclarations": "off",
+        "noInnerDeclarations": "off",
+        "useHookAtTopLevel": "off"
+      },
+      "complexity": {
+        "noBannedTypes": "off",
+        "noForEach": "off",
+        "noUselessFragments": "off",
+        "noUselessConstructor": "off",
+        "noStaticOnlyClass": "off",
+        "useOptionalChain": "off",
+        "useLiteralKeys": "off",
+        "noUselessSwitchCase": "off",
+        "useArrowFunction": "off",
+        "noUselessLoneBlockStatements": "off",
+        "noUselessCatch": "off",
+        "noThisInStatic": "off"
+      },
+      "a11y": {
+        "useKeyWithClickEvents": "off",
+        "useButtonType": "off",
+        "noLabelWithoutControl": "off",
+        "useAltText": "off",
+        "useSemanticElements": "off",
+        "useFocusableInteractive": "off",
+        "noStaticElementInteractions": "off",
+        "noSvgWithoutTitle": "off",
+        "useValidAnchor": "off",
+        "noNoninteractiveElementToInteractiveRole": "off",
+        "noNoninteractiveTabindex": "off",
+        "useKeyWithMouseEvents": "off",
+        "noAutofocus": "off",
+        "noRedundantAlt": "off",
+        "noRedundantRoles": "off",
+        "useMediaCaption": "off",
+        "useAriaPropsForRole": "off",
+        "noAccessKey": "off"
+      },
+      "performance": {
+        "noDelete": "off",
+        "noAccumulatingSpread": "off"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "off",
+        "noDangerouslySetInnerHtmlWithChildren": "warn"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "javascript": {
+    "formatter": { "quoteStyle": "double", "trailingCommas": "es5" }
+  },
+  "files": {
+    "includes": [
+      "**",
+      "!node_modules",
+      "!dist",
+      "!migrations",
+      "!client/src/components/ui",
+      "!**/*.min.js",
+      "!**/*.min.css",
+      "!**/*.css",
+      "!postcss.config.js"
+    ]
+  }
+}

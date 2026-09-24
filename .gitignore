@@ -1,0 +1,18 @@
+node_modules
+dist
+.DS_Store
+server/public
+vite.config.ts.*
+*.tar.gz
+
+# env — never commit secrets
+.env.*.local
+.env
+!.env.example
+
+# Replit Python environment (not part of the app)
+pyproject.toml
+uv.lock
+
+settings.json
+config.bat

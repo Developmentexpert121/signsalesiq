@@ -1,0 +1,26 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "0p0Ree9cUfG0NChOWakC1"
+uri = "file://SignSalesIQ_Feature_List.xlsx"
+type = "table"
+title = "SignSalesIQ — Complete Feature List"
+
+[[outputs]]
+id = "5Oq0w2-9IzNC3x4JEaQXF"
+uri = "file://sign-types.xlsx"
+type = "table"
+title = "Sign Types — SignSalesIQ (45 types)"
+
+[[outputs]]
+id = "wQuJRl5b9lXP0iaPExZMR"
+uri = "file://sign-types-prompts.txt"
+type = "text"
+title = "Sign Types & Prompts Reference"
+
+[[outputs]]
+id = "5-bUEwEpbALBwCrkZOd0f"
+uri = "file://docs/git-code-push-guide.md"
+type = "text"
+title = "Git Code Push Guide"

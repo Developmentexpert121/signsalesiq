@@ -1,0 +1,36 @@
+name: CI
+on:
+  pull_request: {}
+  push:
+    branches: [main, dev-works]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - run: npm ci
+
+      - name: Type check
+        run: npm run check
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
+        env:
+          # Build needs valid env values; use stubs here
+          DATABASE_URL: postgres://postgres:ci@localhost:5432/signsalesiq
+          SESSION_SECRET: ci-secret-that-is-at-least-32-characters-long
+          STRIPE_SECRET_KEY: sk_test_ci_stub
+          NODE_ENV: production

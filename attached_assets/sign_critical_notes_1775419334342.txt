@@ -1,0 +1,166 @@
+================================================================================
+SIGN TYPE CRITICAL CONSTRUCTION NOTES
+For use in: server/seedSignTypeData.ts — criticalConstructionNotes field
+================================================================================
+
+
+--------------------------------------------------------------------------------
+ACRYLIC_SIGN_WITH_STAND_OFFS
+--------------------------------------------------------------------------------
+CRITICAL — This is NOT channel letters. Generate a single flat acrylic panel
+(rectangle) mounted on a wall using four cylindrical brushed stainless steel
+standoff hardware pieces at the corners, creating a 1/2-inch to 1-inch floating
+gap between the panel and the wall. The panel face displays the logo/text. The
+wall is visible around and behind the panel. Do NOT generate individual
+letterforms or channel letters.
+
+
+--------------------------------------------------------------------------------
+A_FRAME_SIGN
+--------------------------------------------------------------------------------
+CRITICAL — Generate the complete physical A-frame unit as it appears on a
+sidewalk, NOT just a flat graphic face. Show: two angled panels forming an
+A-shape, hinged at the top, standing on the ground. The printed graphic insert
+is visible on the front-facing panel. Show the full sign in a sidewalk/storefront
+context at a slight angle so the A-shape is recognizable. Do NOT fill the frame
+edge-to-edge with a flat graphic face only.
+
+
+--------------------------------------------------------------------------------
+AWNING
+--------------------------------------------------------------------------------
+CRITICAL — Generate the complete awning as installed on a building facade, NOT
+a flat panel. Show the fabric canopy projecting outward from the building above
+the storefront entrance, with realistic 3D depth and the correct profile for the
+selected style (standard flat slope / dome / bullnose / box marquee). The company
+name and logo appear on the front slope panel and/or hanging valence. Show the
+building facade above and below for context. Do NOT generate a flat rectangular
+graphic face.
+
+
+--------------------------------------------------------------------------------
+BANNER_STAND
+--------------------------------------------------------------------------------
+CRITICAL — Generate the complete retractable banner stand as a full physical
+unit, NOT just the graphic face. Show: the flat aluminum base cassette on the
+floor, the telescoping pole rising from the base, and the printed graphic banner
+extending upward from the cassette to the top support rail. The full unit is
+visible in an indoor setting (trade show, lobby, or conference room). Do NOT fill
+the frame with only the printed graphic.
+
+
+--------------------------------------------------------------------------------
+BLADE_SIGN
+--------------------------------------------------------------------------------
+CRITICAL — This is a SINGLE PANEL sign projecting perpendicular from the
+building wall on a bracket arm — not individual letterforms. Generate the
+complete blade sign assembly: a decorative bracket arm extending 24–48 inches
+from the wall, with the sign panel (round, oval, or rectangular) hanging or
+rigidly attached to the bracket end. Show the sign from pedestrian eye level
+with the bracket and panel both visible. Do NOT generate channel letters or
+dimensional letterforms.
+
+
+--------------------------------------------------------------------------------
+CORO_YARD_SIGNS
+--------------------------------------------------------------------------------
+Show the sign installed on a galvanized steel H-wire stake pushed into a grass
+or ground surface, at a slight angle showing both the printed face and the stake.
+Outdoor residential or commercial context. The corrugated fluted edge of the
+Coroplast material should be visible on the side.
+
+
+--------------------------------------------------------------------------------
+FEATHER_FLAG
+--------------------------------------------------------------------------------
+CRITICAL — Generate the complete feather flag assembly as a physical outdoor
+installation, NOT a flat rectangular graphic. Show: the flexible fiberglass or
+aluminum segmented pole curved into the characteristic feather/teardrop bow
+shape, with the printed fabric banner attached along the curved edge and
+billowing naturally. Base options: ground spike in grass, or cross base on a
+hard surface. Show the full height of the flag (8–15 feet) in an outdoor
+setting. Do NOT generate a flat vertical rectangle.
+
+
+--------------------------------------------------------------------------------
+FLAG_SIGNS
+--------------------------------------------------------------------------------
+CRITICAL — Generate the complete flag sign as installed, NOT a flat rectangular
+panel. Show the printed fabric flag mounted on a wall-mounted outrigger bracket
+or flagpole, with realistic fabric drape, slight movement or wave, and the
+mounting bracket/pole visible. The flag hangs perpendicular to the building face
+or flies from a pole. Show the building facade for context. Do NOT generate a
+flat rectangular graphic fill.
+
+
+--------------------------------------------------------------------------------
+LIGHT_BOX
+--------------------------------------------------------------------------------
+CRITICAL — This sign is internally illuminated. Render the sign face as backlit
+— graphics appear bright and vibrant, glowing from even internal LED lighting
+behind the translucent face panel. The face panel edges show the aluminum
+extrusion frame. Prefer a dusk or interior setting where the illumination reads
+clearly. Do NOT render as a flat non-illuminated panel.
+
+
+--------------------------------------------------------------------------------
+LIGHT_BOX_FACE
+--------------------------------------------------------------------------------
+CRITICAL — This sign is internally illuminated. Render the sign face as backlit
+— graphics appear bright and vibrant, glowing from even internal LED lighting
+behind the translucent face panel. The face panel edges show the aluminum
+extrusion frame. Prefer a dusk or interior setting where the illumination reads
+clearly. Do NOT render as a flat non-illuminated panel.
+
+
+--------------------------------------------------------------------------------
+POLE_BANNERS
+--------------------------------------------------------------------------------
+Show two matching banners installed on a single vertical street pole using
+horizontal bracket arms at the top and bottom edges of each banner, keeping the
+fabric flat and taut. Both banners visible, pole centered between them, outdoor
+streetscape or parking lot context. The bracket hardware at top and bottom of
+each banner should be visible.
+
+
+--------------------------------------------------------------------------------
+PUSH_THRU_LETTERS
+--------------------------------------------------------------------------------
+CRITICAL — This is NOT individual channel letters. Generate a flat sign cabinet
+face (opaque background panel) with letter-shaped cutouts filled with translucent
+acrylic inserts that glow from internal LED backlighting. The letters appear as
+bright, evenly lit shapes sitting flush with or slightly proud of the opaque
+cabinet surface. The surrounding cabinet face is solid opaque. Do NOT render
+separate 3D letterforms floating off a wall.
+
+
+--------------------------------------------------------------------------------
+STEP_AND_REPEAT_BACKDROP
+--------------------------------------------------------------------------------
+CRITICAL — The graphic must be a true step-and-repeat repeating tile pattern:
+the logo or brand mark repeats uniformly across the ENTIRE backdrop surface in
+a grid with alternating horizontal offsets (each row offset by half a logo
+width). No single centered logo — the pattern must cover edge-to-edge. Show the
+full backdrop on its pipe-and-drape frame in an event setting.
+
+
+--------------------------------------------------------------------------------
+TABLE_THROW
+--------------------------------------------------------------------------------
+CRITICAL — Generate the complete table throw as installed on a 6-foot or 8-foot
+folding banquet table in a real setting (trade show booth, event registration,
+conference). Show the full table with the printed fabric draped over it — front
+panel displaying the logo prominently, sides draped to the floor or table edge.
+The 3D drape, fabric folds at the corners, and table form should all be visible.
+Do NOT generate just a flat rectangular fabric panel.
+
+
+================================================================================
+VEHICLE SIGNS — NEW TEMPLATE REQUIRED
+================================================================================
+NOTE: VEHICLE_LETTERING, VEHICLE_WRAP_FULL, and VEHICLE_WRAP_PARTIAL need a
+dedicated Vehicle template in geminiMockupService.ts — not just a construction
+note. See separate vehicle template instructions.
+================================================================================
+END OF FILE
+================================================================================

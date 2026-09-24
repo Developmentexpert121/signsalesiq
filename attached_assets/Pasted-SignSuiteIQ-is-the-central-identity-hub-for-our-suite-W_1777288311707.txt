@@ -1,0 +1,44 @@
+SignSuiteIQ is the central identity hub for our suite. When a user clicks the "SignSalesIQ" tile on their SignSuiteIQ dashboard, their browser is redirected to https://www.signsalesiq.ai/sso/callback?code=<one-time-code>. We need a route that handles that, exchanges the code for the user identity, and logs the user into SignSalesIQ — without showing the login screen.
+
+What to build
+
+Add an environment secret to this Replit project named SIGNSUITEIQ_SSO_SECRET. The value will be requested separately. Treat it like a password — server-side only, never exposed to the browser.
+
+Add a column to the users table: signsuiteiq_user_id INTEGER UNIQUE (nullable; partial unique index so multiple un-linked rows are allowed). This is the bridge between a SignSalesIQ user and their SignSuiteIQ identity.
+
+Add one new route on the backend: GET /sso/callback
+
+Read code from the query string. If missing or empty, render a branded error page.
+Make a server-to-server POST request to https://www.signsuiteiq.ai/api/sso/exchange with JSON body:
+{ "code": "<the code>", "clientId": "signsalesiq", "clientSecret": "<from env>" }
+
+On non-200 response: render an error page with the upstream message. Do not retry — codes are single-use.
+On 200 response, the body looks like:
+{
+  "appKey": "signsalesiq",
+  "user": {
+    "id": 42,
+    "name": "Jane Doe",
+    "username": "jdoe",
+    "email": "jane@example.com",
+    "phone": null,
+    "role": "user",
+    "companyId": 7
+  }
+}
+
+Find a local SignSalesIQ user by signsuiteiq_user_id = user.id. If not found, fall back to matching by email (case-insensitive); when matched by email, stamp signsuiteiq_user_id = user.id so future logins are direct. If still not found, create a new local user with the email/name/role provided (no password — they'll only ever sign in via SSO).
+Start SignSalesIQ's normal login session for that user (the same cookie/JWT your existing login flow uses).
+Redirect to / (or wherever your post-login landing page is).
+Important constraints
+
+clientSecret must come from process.env.SIGNSUITEIQ_SSO_SECRET. Never hardcode it.
+The exchange call is server-to-server only. Never expose the secret or the exchange URL to the browser.
+Do not change the existing email/password login — keep it working in parallel. SSO is an additional entry point.
+Codes expire in 60 seconds and are single-use; the API will reject anything else.
+How to test once it's wired
+
+Log into SignSuiteIQ as a user who has SignSalesIQ access.
+On the dashboard, click the SignSalesIQ tile.
+You should land directly inside SignSalesIQ, logged in, no login form shown.
+Don't change anything else — no UI changes, no signup-page changes, no password migration. Just add this one route + column + secret.

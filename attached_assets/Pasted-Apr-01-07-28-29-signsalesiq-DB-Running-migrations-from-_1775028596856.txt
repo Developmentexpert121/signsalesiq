@@ -1,0 +1,41 @@
+Apr 01 07:28:29 [signsalesiq] [DB] Running migrations from /workspace/dist/migrations...
+Apr 01 07:28:29 [signsalesiq] (node:28) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+Apr 01 07:28:29 [signsalesiq] (Use `node --trace-warnings ...` to show where the warning was created)
+Apr 01 07:28:29 [signsalesiq] [DB] Migration error (tables may already exist): syntax error at or near "NOT"
+Apr 01 07:28:29 [signsalesiq] Ensured VEHICLE location_type enum value exists
+Apr 01 07:28:29 [signsalesiq] Seeding tenants and users...
+Apr 01 07:28:29 [signsalesiq] Users and tenants seeded successfully.
+Apr 01 07:28:29 [signsalesiq] 7:28:29 AM [express] serving on port 8080
+Apr 01 07:28:29 [signsalesiq] 7:28:29 AM [express] environment: production
+Apr 01 07:28:29 [signsalesiq] 7:28:29 AM [express] health check: http://0.0.0.0:8080/health
+Apr 01 07:28:29 [signsalesiq] 
+Apr 01 07:28:29 [signsalesiq] ===========================================
+Apr 01 07:28:29 [signsalesiq]   SignSalesIQ - Startup Configuration
+Apr 01 07:28:29 [signsalesiq] ===========================================
+Apr 01 07:28:29 [signsalesiq]   Environment   : production
+Apr 01 07:28:29 [signsalesiq]   Port          : 8080
+Apr 01 07:28:29 [signsalesiq]   Database      : postgresql:***@signsalesiq-db-do-user-33441100-0.f.db.ondigitalocean.com:25060/defaultdb?sslmode=require
+Apr 01 07:28:29 [signsalesiq]   Replit        : no
+Apr 01 07:28:29 [signsalesiq] 
+Apr 01 07:28:29 [signsalesiq]   --- AI Services ---
+Apr 01 07:28:29 [signsalesiq]   Vertex API Key          : (not set)
+Apr 01 07:28:29 [signsalesiq]   Google API Key          : ***set***
+Apr 01 07:28:29 [signsalesiq]   Gemini Integrations Key : ***set***
+Apr 01 07:28:29 [signsalesiq]   Gemini Base URL         : http://localhost:1106/modelfarm/gemini
+Apr 01 07:28:29 [signsalesiq] 
+Apr 01 07:28:29 [signsalesiq]   --- Email ---
+Apr 01 07:28:29 [signsalesiq]   SMTP From : info@installiq.ai
+Apr 01 07:28:29 [signsalesiq]   SMTP Pass : ***set***
+Apr 01 07:28:29 [signsalesiq] 
+Apr 01 07:28:29 [signsalesiq]   --- Stripe ---
+Apr 01 07:28:29 [signsalesiq]   Secret Key     : ***set***
+Apr 01 07:28:29 [signsalesiq]   Webhook Secret : (not set)
+Apr 01 07:28:29 [signsalesiq] 
+Apr 01 07:28:29 [signsalesiq]   --- Object Storage ---
+Apr 01 07:28:29 [signsalesiq]   Bucket ID : ***set***
+Apr 01 07:28:29 [signsalesiq] ===========================================
+Apr 01 07:28:29 [signsalesiq] 
+Apr 01 07:28:29 [signsalesiq] [Email] SMTP configured: host=smtp0001.neo.space port=587 user=info@installiq.ai
+Apr 01 07:28:29 [signsalesiq]  pass=ins*** (len=13)
+Apr 01 07:28:29 [signsalesiq] Starting plan expiration scheduler (runs every 12 hours)
+Apr 01 07:28:32 [signsalesiq] [Email] SMTP connection FAILED: Invalid login: 535 5.7.8 Error: authentication failed: 
